@@ -6,6 +6,14 @@ let [n1, n2, n3, n4] = numberArray;
 console.log(n1);
 console.log(n2);
 
+// Swipe Data
+let a = 10;
+let b = 20;
+
+[a, b] = [b, a];
+
+console.log(`a = ${a}, b = ${b}`);
+
 // Destructure Object
 let student = {
     id : 101,
