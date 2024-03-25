@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // Add even numbers
+
+        var num = 2;
+        sum = 0;
+        
+        while(num <= 100)
+        {
+            if(num < 100)
+                document.write(num + ' + ');
+            else
+                document.write(num + ' = ');
+
+            sum += num;
+            num += 2;
+        }
+        document.write('<b>'+sum+'</b>');
+    </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+#dtnow {
+    background-color: yellow;
+    font-size: 5rem;
+    padding: 20px;
+    text-align: center;
+}
+
+#timenow {
+    background-color: black;
+    color: yellow;
+    font-size: 4rem;
+    padding: 15px;
+    text-align: center;
+}

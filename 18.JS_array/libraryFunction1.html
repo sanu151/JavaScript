@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        var names = ['Sanu', 'Rupa', 'Manu', 'Sona', 'Sonali', 'Rohon'];
+
+        names.shift();
+        console.log(names);
+
+        names.unshift('Supriyo');
+        console.log(names);
+
+        // Adding elememnt to array
+        names.splice(1,0,'Rishika','Sagar');
+        console.log(names);
+
+        names.splice(2, 2, 'Misti');
+        console.log(names);
+
+        // Remove element from array
+        names.splice(1, 2);
+        console.log(names);
+
+        var sliceArray = names.slice(1);
+        console.log(sliceArray);
+        console.log(names);
+        var sliceArray1 = names.slice(2, 4);
+        console.log(sliceArray1);
+        console.log(names);
+
+        var sortedArray = names.sort();
+        console.log(sortedArray);
+        names.reverse();
+        console.log(sortedArray);
+
+        var num = [10, 5, 23, 22, 54, 2, 33, 11, 29];
+        console.log(num);
+        var sortedNumber = num.sort(function(a,b){
+            return(a-b); // for sort in reverse (b-a)
+        });
+        console.log(sortedNumber);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+.mybutton {
+    width: 57px;
+    height: 500PX;
+    background-color: green;
+    color: white;
+    font-size: 1.3rem;  
+}
+
+.anime {
+    background-color: tomato;
+    color: blue;
+}

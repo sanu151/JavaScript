@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // Input from User
+        var text = prompt("Enter your name : ");
+        var len = text.length;  // Length of text
+
+        document.write("Number of Chracter in <b>"+text+"</b> is : <b>"+ len+"</b>");
+
+        document.write('<br/>');
+        document.write("3rd Caracter of the String : "+text.charAt(3)); 
+        document.write('<br/>');
+
+        text = text.toUpperCase();  // Change text as Uppercase text
+        document.write("To Upper Case : "+text);
+
+        document.write('<br/>');
+        text = text.toLowerCase();  // Change text as Lowercase text
+        document.write("To Lower Case : "+text);
+
+        var text1 = "India";
+        var text2 = " is a beautiful Country.";
+
+        text3 = text1.concat(text2);    // Concatinate text1 + text2 and assign this string in text3
+        document.write('<br/>');
+        document.write('<br/>');
+        document.write(text3);
+        document.write('<br/>');
+        text4 = text1.slice(0, 3);  // Slice a text
+        document.write("Slice text1 from 1st to 3rd character : "+ text4);
+
+    </script>
+
+</body>
+</html>

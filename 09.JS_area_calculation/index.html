@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var base = prompt('Enter Base : ');
+        var height = prompt('Enter Height : ');
+        var radious = prompt('Enter Radious : ');
+
+        base = parseFloat(base, 10);
+        height = parseFloat(height, 10);
+        radious = parseFloat(radious, 10);
+        
+        var n = '<br/>';
+
+        // Area of Triangle
+        var triangleArea = 0.5 * base * height;
+        document.write('Area of Triangle is : '+triangleArea);
+        document.write(n);
+
+        // Area of Ractangle
+        var rectangleArea = base * height;
+        document.write('Area of Ractangle is : '+rectangleArea);
+        document.write(n);
+
+        // Area of Circle
+        var circleArea = (22/7) * radious**2;
+        document.write('Area of Circle is : '+circleArea);
+        document.write(n);
+
+    </script>
+</body>
+</html>

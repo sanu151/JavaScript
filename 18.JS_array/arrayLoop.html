@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        var num = new Array();
+        var sum = 0;
+
+        for(var i=0; i<5; i++)
+        {
+            num[i] = Number(prompt('Enter number ',i+1,' : '));
+        }
+
+        for(var i=0; i<5; i++)
+        {
+            console.log(num[i]);
+            sum += num[i];
+        }
+
+        console.log('Sum = ',sum);
+    </script>
+</body>
+</html>

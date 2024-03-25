@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        var n = "<br/>";
+        // Arithmetic and assignment operator
+        // Arithmatic Operator : +, -, *, /, %, **, ++, -- 
+        var num1 = prompt("Enter first Number : ");
+        var num2 = prompt("Enter second Number : ");
+
+        num1 = parseFloat(num1, 10);
+        num2 = parseFloat(num2, 10);
+
+        var add = num1 + num2;  // Add 2 numbers
+        document.write(num1 + " + "+ num2+" = "+add);
+        document.write(n);
+
+        var subtract = num1 - num2; // Subtract 2 numbers
+        document.write(num1 + " - "+ num2+" = "+subtract);
+        document.write(n);
+
+        var multiply = num1 * num2; // Multiply 2 numbers
+        document.write(num1 + " X "+ num2+" = "+multiply);
+        document.write(n);
+
+        var divition = num1 / num2; //Divide 2 numbers
+        document.write(num1 + " / "+ num2+" = "+divition.toFixed(2));
+        document.write(n);
+
+        var modulus = num1 % num2;  // Modulus(Reminder of divition) 2 numbers 
+        document.write(num1 + " % "+ num2+" = "+modulus);
+        document.write(n);
+
+        var exponencial = num1 ** num2; // Exponencial (a^b) 
+        document.write(num1 + "^"+ num2+" = "+exponencial);
+        document.write(n);
+
+
+        document.write("Preincriment : "+ ++num1);  // Priincriment (++var_name) 
+        document.write(n);
+
+        document.write("Postincriment 1 : "+ num1++);  // Postincriment (var_name++)
+        document.write(n);
+        document.write("Postincriment 2 : "+ num1++);  // Postincriment (var_name++)
+        document.write(n);
+
+        document.write("Predecriment : "+ --num1);  // Pridecriment (--var_name) 
+        document.write(n);
+
+        document.write("Postdecriment 1 : "+ num1--);  // Postdecriment (var_name--)
+        document.write(n);
+        document.write("Postdecriment 2: "+ num1--);  // Postdecriment (var_name--)
+        document.write(n);
+
+        // Assignment Operator : =, +=, -=, *=, /=, %=, **= 
+
+        num1 = 3;
+        document.write('num1 => '+ num1);
+        document.write(n);
+        num1 += 4;
+        document.write('num1 += 4 => '+ num1);
+        document.write(n);
+        num1 -= 4;
+        document.write('num1 -= 4 => '+ num1);
+        document.write(n);
+        num1 *= 4;
+        document.write('num1 *= 4 => '+ num1);
+        document.write(n);
+        num1 /= 4;
+        document.write('num1 /= 4 => '+ num1);
+        document.write(n);
+        num1 %= 4;
+        document.write('num1 %= 4 => '+ num1);
+        document.write(n);
+        num1 **= 4;
+        document.write('num1 **= 4 => '+ num1);
+        document.write(n);
+        
+    </script>
+</body>
+</html>
