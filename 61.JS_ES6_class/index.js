@@ -1,4 +1,4 @@
-// ES6 Class -> constuctor, set, get.
+// ES6 Class -> constructor, set, get.
 
 class student {
     constructor (id, name) {
