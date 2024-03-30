@@ -20,6 +20,7 @@ const taskFive = () => {
     return new Promise((resolved, reject) => resolved('Task 5 completed.'));
 }
 
+// Chaining Promise to execute one after one.
 taskOne()
 .then(res => console.log(res))
 .then(taskTwo)
