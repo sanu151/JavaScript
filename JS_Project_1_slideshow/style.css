@@ -1,0 +1,24 @@
+.slideShow-container {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: aqua;
+}
+
+.slideShow-element {
+    text-align: center;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(0); /* to hide element use scale(0)*/
+    transition: transform 0.6s; /*for animation effect*/
+}
+
+.slideShow-element i, h2{
+    font-size: 10rem;
+    color: brown;
+}
+
+.slideShow-element.current{
+    transform: translate(-50%, -50%) scale(1); /*to show element use scale(1) */
+    transition: transform 0.6s; /*for animation effect*/
+}
