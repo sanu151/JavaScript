@@ -31,3 +31,19 @@ h1 {
     transition: all 0.4s;
 }
 /* posts ends here */
+
+/* Responsive part starts here */
+
+@media screen and (max-width: 992px){
+    .post {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .post {
+        width: 100%;
+    }
+}
+
+/* Responsive part ends here */
