@@ -11,11 +11,23 @@ const guessingNumber = form.querySelector('#guessingNumber');
 const checkButton = form.querySelector('#check');
 const resultText = cardBody.querySelector('#resultText');
 const remainingAttempt = cardBody.querySelector('#remainingAttempt');
+const lostWinMessage = document.createElement('p');
 
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-    checkResult(guessingNumber.value);
+    attempt++;
+    if(attempt === 5){
+        guessingNumber.disabled = true;
+        checkButton.disabled = true;
+    }
+    if(attempt < 6){  
+        let checkNumber = Number(guessingNumber.value);
+        checkResult(checkNumber);
+        remainingAttempt.innerHTML = `Remaining attempts : ${totalAttempt - attempt}`;
+    }
+    
+    guessingNumber.value = '';
 });
 
 // Functions
@@ -23,10 +35,15 @@ const checkResult = (guessingNumber) => {
     const randomNumber = getRandomNumber(5);
     if(guessingNumber == randomNumber){
         resultText.innerHTML = `You have WON !`
+        totalWin++;
     }
     else{
         resultText.innerHTML = `You have lost. Random number was : ${randomNumber}`;
+        totalLost++;
     }
+    lostWinMessage.innerHTML = `Won : ${totalWin}, Lost : ${totalLost}`;
+    lostWinMessage.classList.add('large-text');
+    cardBody.appendChild(lostWinMessage);
 }
 
 const getRandomNumber = (limit) => {
