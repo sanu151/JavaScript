@@ -11,7 +11,7 @@ const guessingNumber = form.querySelector('#guessingNumber');
 const checkButton = form.querySelector('#check');
 const resultText = cardBody.querySelector('#resultText');
 const remainingAttempt = cardBody.querySelector('#remainingAttempt');
-const lostWinMessage = document.createElement('p');
+const lostWinMessage = document.createElement('p'); // Create HTML Tag from JS
 
 
 form.addEventListener('submit', (event) => {
