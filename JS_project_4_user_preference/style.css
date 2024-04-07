@@ -1,0 +1,23 @@
+/* Reset Code Starts*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* Reset Code Ends*/
+
+.container {
+     padding: 1rem;
+}
+
+select {
+    margin: 0 1rem 1rem 0;
+}
+
+main {
+    background-color: aqua;
+}
+
+p {
+    padding: 1rem;
+}
