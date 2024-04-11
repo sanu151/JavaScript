@@ -20,3 +20,5 @@ Prettier is an opinionated code formatter with support for:
 - YAML
 
 It removes all original styling and ensures that all outputted code conforms to a consistent style. 
+
+**jsdoc Documentation :** https://github.com/anisul-Islam/jsdoc-documentation
