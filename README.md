@@ -27,3 +27,5 @@ Prettier is an opinionated code formatter with support for:
 It removes all original styling and ensures that all outputted code conforms to a consistent style. 
 
 **jsdoc Documentation :** https://github.com/anisul-Islam/jsdoc-documentation
+
+HTML, CSS, JS cheat sheet : https://htmlcheatsheet.com/
