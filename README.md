@@ -1,6 +1,11 @@
 # JavaScript
 **JS Documentation :** https://github.com/anisul-Islam/javascript-documentation
 
+JSON Placeholder : https://jsonplaceholder.typicode.com/guide/
+
+font-awsome CDN : https://cdnjs.com/libraries/font-awesome  ,
+font-awsome icon : https://fontawesome.com/search?q=trash&o=r&m=free&f=sharp%2Cclassic
+
 **Prettier : https://prettier.io/**
 
 Prettier is an opinionated code formatter with support for:
