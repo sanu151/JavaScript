@@ -1,6 +1,27 @@
 // JavaScript -> jsdocs
 
 /**
+ * Name of the user
+ * @type {string}
+ */
+let userName = "Supriyo Das";
+
+/**
+ * Name of users
+ * @type {Array<string>}
+ */
+let users = ["Sanu", "Rupa", "Rishika"];
+
+/**
+ * Details of user1
+ * @type {{name: string, age: number}}
+ */
+const user1 = {
+  name: "Supriyo Das",
+  age: 36,
+};
+
+/**
  * Area of Nothing
  * @returns not important
  */
