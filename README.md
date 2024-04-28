@@ -29,3 +29,12 @@ It removes all original styling and ensures that all outputted code conforms to 
 **jsdoc Documentation :** https://github.com/anisul-Islam/jsdoc-documentation
 
 HTML, CSS, JS cheat sheet : https://htmlcheatsheet.com/
+
+# Notes
+
+**What is JavaScript?**
+
+-  JavaScript is a high level multi-paradign object-oriented Programming language.
+-  It is also Synchronous and single threaded in Behavior
+-  It is the Language of th eweb and is used to make web pages and web applications work Dynamically.
+
