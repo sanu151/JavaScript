@@ -35,6 +35,28 @@ HTML, CSS, JS cheat sheet : https://htmlcheatsheet.com/
 **What is JavaScript?**
 
 -  JavaScript is a high level multi-paradign object-oriented Programming language.
+  
 -  It is also Synchronous and single threaded in Behavior
--  It is the Language of th eweb and is used to make web pages and web applications work Dynamically.
+
+  
+-  It is the Language of the Web and is used to make web pages and web applications work Dynamically.
+
+**JavaScript on the Browser?**
+
+- Almost Every Browser today is Empowered by JavaScript.
+
+- Every browser has an embedded JavaScript engine.
+  > For example, - Chrome uses V8 Engine, Mozilla firefox uses spider monkey.
+
+- JavaScript was initially created to "make web pages alive".
+
+- The programs in this language are called scripts. They can be written right in a web page's HTML and run automatically as the page loads.
+
+**JavaScript in the Browser**
+```
+console.log('Welcome to JavaScript');
+VM1239:1 Welcome to JavaScript
+undefined
+alert('This is an alert message');
+```
 
