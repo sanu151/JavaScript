@@ -60,3 +60,13 @@ undefined
 alert('This is an alert message');
 ```
 
+```
+let a = 2;
+undefined
+console.log(a);
+VM1532:1 2
+undefined
+40+2+8
+50
+```
+
