@@ -70,3 +70,62 @@ undefined
 50
 ```
 
+**What is Node.js?**
+
+**Node.js** is an open-sounce, cross-platform, back-end JavaScript runtime environment that runs on the VS engine and executes JaavaSeript code outside a web browser, which was designed to build scalable network applications.
+
+It was Developed by Ryan Dahi and It uses Chrome's V8 engine.
+
+Node.js is an open source, cross-platform runtime environment for developing server-side and networking applications. Node.js applications are written in JavaScript, and can be run within the Node.js runtime on OS X, Microsoft Windows, and Linux.
+
+**Variables in JavaScript**
+
+> Variables are containers for storing data (storing data values).
+
+> Variable means **anything that can very**. In JavaScript, a variable stores the data value that can be changed later on.
+
+**The var keyword**
+
+- This is a reserved keyword in JavaScript which is to declare variables that is the 'var' keyword
+```
+> var a = 20;
+
+> var greet = "Hello"
+
+> var persionName = 'Supriyo Das'
+
+> var isAvailable = true
+```
+
+**Dynamically vs Statically typed Languages**
+
+- Statically typed languages: each variable and expression is already known at compile time.
+
+example:
+``` c
+#include<stdio.h>
+
+int main()
+{
+    int a = 20;
+
+    char ch = 'G';
+
+    double b = 2.5;
+
+    printf("%d, %c, %lf", a, ch, b);
+}
+```
+
+- Dynamically typed languages: variables can receive different values at run time and their type is defined at run time.
+
+``` JS
+> var a = 20;
+
+> var greet = "Hello"
+
+> var persionName = 'Supriyo Das'
+
+> var isAvailable = true
+```
+
