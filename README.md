@@ -129,3 +129,70 @@ int main()
 > var isAvailable = true
 ```
 
+**Rules for variable**
+
+Creating variables in JavaScript is fundamental for storing and manipulating data. Here are the basic rules:
+
+1. **Variable Declaration**: You declare variables in JavaScript using the `var`, `let`, or `const` keyword.
+
+    ```javascript
+    var x; // Declares a variable named x
+    let y; // Declares a block-scoped variable named y
+    const z = 10; // Declares a constant named z with the value 10
+    ```
+
+2. **Naming Rules**:
+    - Variable names can contain letters, digits, underscores, and dollar signs.
+    - They must begin with a letter, an underscore (_), or a dollar sign ($).
+    - Variable names are case-sensitive (`age` and `Age` are different variables).
+
+3. **Reserved Keywords**: You cannot use JavaScript reserved keywords as variable names.
+
+    ```javascript
+    // Incorrect
+    var var = 5; // 'var' is a reserved keyword
+
+    // Correct
+    var variable = 5;
+    ```
+
+4. **Initial Value Assignment**: You can optionally assign an initial value to a variable at the time of declaration.
+
+    ```javascript
+    var x = 5; // Declares a variable x and assigns it the value 5
+    let y = "Hello"; // Declares a variable y and assigns it the string "Hello"
+    const z = []; // Declares a constant z and assigns it an empty array
+    ```
+
+5. **Scope**:
+    - Variables declared with `var` have function-level scope. They are visible throughout the function they are declared in.
+    - Variables declared with `let` and `const` have block-level scope. They are only visible within the block they are declared in.
+
+    ```javascript
+    function example() {
+        if (true) {
+            var a = 10; // 'a' is accessible outside this block
+            let b = 20; // 'b' is only accessible within this block
+            const c = 30; // 'c' is also only accessible within this block
+        }
+        console.log(a); // Outputs 10
+        console.log(b); // ReferenceError: b is not defined
+        console.log(c); // ReferenceError: c is not defined
+    }
+    ```
+
+6. **Re-declaration**:
+    - Variables declared with `var` can be re-declared and updated.
+    - Variables declared with `let` and `const` cannot be re-declared but can be updated.
+
+    ```javascript
+    var x = 5;
+    var x = 10; // This is allowed, x is re-declared
+
+    let y = 5;
+    let y = 10; // SyntaxError: Identifier 'y' has already been declared
+
+    const z = 5;
+    z = 10; // TypeError: Assignment to constant variable.
+    ```
+
