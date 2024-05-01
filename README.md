@@ -30,6 +30,8 @@ It removes all original styling and ensures that all outputted code conforms to 
 
 HTML, CSS, JS cheat sheet : https://htmlcheatsheet.com/
 
+---
+
 # Notes
 
 **What is JavaScript?**
