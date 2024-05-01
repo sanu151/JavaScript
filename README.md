@@ -369,6 +369,16 @@ console.log(myData.family.spose); // Rupa Das
 
 **Conditional Statements(if, else, else-if)**
 
+* Conditional statements, also known as decision-making statements, are a fundamental concept in programming. They allow you to control the flow of your program based on certain conditions.
+
+*There are three main types of conditional statements:*
+
+**if statement:** This statement checks a condition. If the condition is true, a block of code is executed.
+
+**else statement:** This statement is used in conjunction with an if statement. If the condition in the if statement is false, the code block in the else statement is executed.
+
+**else if statement:** This statement is also used in conjunction with an if statement. It allows you to check multiple conditions. If the condition in the if statement is false, the conditions in the else if statements are checked sequentially. If a condition in an else if statement is true, the corresponding code block is executed, and the remaining else if and else statements are skipped. If none of the conditions are true, the code block in the else statement (if it exists) is executed.
+
 Example:
 ```JavaScript
 var myScore = 93;
