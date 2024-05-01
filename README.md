@@ -196,3 +196,17 @@ Creating variables in JavaScript is fundamental for storing and manipulating dat
     z = 10; // TypeError: Assignment to constant variable.
     ```
 
+**What are Arrays?**
+
+- Similar to a variable an array also stores data but it can store multiple data items.
+
+- It enables storing multiple values under a same variable name and we can also preform operations on them by using different methods and properties also every value gets a sequenial index starting from 0.
+
+- In JavaScript arrays can store values of different data types whereas in statically typed language arrays will store only that data by which the Array is defined.
+
+**Representing an Array**
+
+Array starts from index 0 by default and it goes upto the last element.
+
+![image](https://github.com/sanu151/JavaScript/assets/68671274/57efabd9-4335-4580-9691-20e865ead81a)
+
