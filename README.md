@@ -310,7 +310,7 @@ These are just a few of the many methods available for manipulating arrays in Ja
 
 - Every object in JavaScript describes a different Entity with its properties
 
-Example:
+Example 1:
 ```JavaScript
 > var car = {
 ... "model_no": "wxy123",
@@ -333,3 +333,66 @@ red
 wxy123
 ```
 
+Example 2:
+```JavaScript
+// Create nested object
+
+var myData = {
+  firstName: "Supriyo",
+  lastName: "Das",
+  age: 36,
+  address: {
+    city: {
+      line1: "Keota Kundubagan",
+      line2: "Onkernath Lane",
+      line3: "Near Onkernath Ashrom",
+      nearByRailStation: "Bandel",
+    },
+    post: "Sahaganj",
+    municipality: "Hooghly-Chuchura",
+    dist: "Hooghly",
+    state: "West Bengal",
+    pincode: 712104,
+  },
+  friends: ["Jojo", "Kanai", "Sanu"],
+  family: {
+    father: "Let Mritunjoy Das",
+    mother: "Sandhya Das",
+    garden: "Sandhya Das (Aunt)",
+    spose: "Rupa Das",
+    daughter: "Rishika Das",
+  },
+};
+
+console.log(myData.family.spose); // Rupa Das
+```
+
+**Conditional Statements(if, else, else-if)**
+
+Example:
+```JavaScript
+var myScore = 93;
+
+// if else
+if (myScore >= 90) {
+  console.log("yaeee! I got the bicycle");
+} else {
+  console.log("opps! missed this time");
+}
+
+// if else-if else
+if (myScore >= 90) {
+  console.log("Grade A");
+} else if (myScore >= 70 && myScore < 90) {
+  console.log("Grade B");
+} else if (myScore >= 50 && myScore < 70) {
+  console.log("Grade C");
+} else {
+  console.log("Grade F");
+}
+```
+Output:
+```
+yaeee! I got the bicycle
+Grade A
+```
