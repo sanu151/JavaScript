@@ -231,5 +231,70 @@ Supriyo
 > console.log(arr);
 [ 12, 'Rupa', true, 12.4 ]
 
+> console.log('The length of the array is :', arr.length);
+The length of the array is : 4
+
 ```
+
+**Array methodes**
+
+JavaScript provides several built-in methods for working with arrays. Here are some commonly used array methods:
+
+1. **push()**: Adds one or more elements to the end of an array and returns the new length of the array.
+
+    ```javascript
+    const fruits = ['apple', 'banana'];
+    fruits.push('orange'); // ['apple', 'banana', 'orange']
+    ```
+
+2. **pop()**: Removes the last element from an array and returns that element.
+
+    ```javascript
+    const fruits = ['apple', 'banana', 'orange'];
+    const lastFruit = fruits.pop(); // 'orange'
+    ```
+
+3. **shift()**: Removes the first element from an array and returns that element.
+
+    ```javascript
+    const fruits = ['apple', 'banana', 'orange'];
+    const firstFruit = fruits.shift(); // 'apple'
+    ```
+
+4. **unshift()**: Adds one or more elements to the beginning of an array and returns the new length of the array.
+
+    ```javascript
+    const fruits = ['banana', 'orange'];
+    fruits.unshift('apple'); // ['apple', 'banana', 'orange']
+    ```
+
+5. **concat()**: Returns a new array that combines the elements of the original array with the elements of other arrays or values.
+
+    ```javascript
+    const fruits = ['apple', 'banana'];
+    const moreFruits = fruits.concat(['orange', 'kiwi']); // ['apple', 'banana', 'orange', 'kiwi']
+    ```
+
+6. **splice()**: Changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+
+    ```javascript
+    const fruits = ['apple', 'banana', 'orange', 'kiwi'];
+    fruits.splice(2, 1, 'grape'); // ['apple', 'banana', 'grape', 'kiwi']
+    ```
+
+7. **slice()**: Returns a shallow copy of a portion of an array into a new array object.
+
+    ```javascript
+    const fruits = ['apple', 'banana', 'orange', 'kiwi'];
+    const citrus = fruits.slice(1, 3); // ['banana', 'orange']
+    ```
+
+8. **forEach()**: Calls a function for each element in the array.
+
+    ```javascript
+    const numbers = [1, 2, 3];
+    numbers.forEach((num) => console.log(num)); // Outputs: 1, 2, 3
+    ```
+
+These are just a few of the many methods available for manipulating arrays in JavaScript. Each method serves a specific purpose and can be used to efficiently work with arrays in your code.
 
