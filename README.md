@@ -210,3 +210,26 @@ Array starts from index 0 by default and it goes upto the last element.
 
 ![image](https://github.com/sanu151/JavaScript/assets/68671274/57efabd9-4335-4580-9691-20e865ead81a)
 
+```
+> var arr = [12, 'Supriyo', true, 12.4];
+
+> console.log(arr);
+[ 12, 'Supriyo', true, 12.4 ]
+
+> var a = arr[1];
+
+> console.log(a);
+Supriyo
+
+> console.log(arr[3]);
+12.4
+
+> // replacing elements of an arry by using index
+
+> arr[1] = 'Rupa';
+'Rupa'
+> console.log(arr);
+[ 12, 'Rupa', true, 12.4 ]
+
+```
+
