@@ -298,3 +298,36 @@ JavaScript provides several built-in methods for working with arrays. Here are s
 
 These are just a few of the many methods available for manipulating arrays in JavaScript. Each method serves a specific purpose and can be used to efficiently work with arrays in your code.
 
+**Objects in JavaScript**
+
+- IN JavaScript, an object is an unordered collection of key-value pairs. Each key-value pair is called a property.
+
+- The key of a property can be a string. And the value of a property can be any value, e.g., *string*, a *number*, an *array*, and even a *function*.
+
+- JavaScript provides us with many ways to create an object. The most commonly used one is to use the object literal notation.
+
+- Every object in JavaScript describes a different Entity with its properties
+
+Example:
+```JavaScript
+> var car = {
+... "model_no": "wxy123",
+... "brand": "abc",
+... "top_speed": 200,
+... "color": "red"
+... };
+
+> console.log(car);
+{ model_no: 'wxy123', brand: 'abc', top_speed: 200, color: 'red' }
+
+// fatch the value from object
+
+// dot notation
+> console.log(car.color);
+red
+
+// bracket notation
+> console.log(car['model_no']);
+wxy123
+```
+
