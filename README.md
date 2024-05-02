@@ -506,3 +506,8 @@ for (var color in colorsArray) {
 }
 ```
 
+**for of loop**
+
+- The for of sratement creates a loop iterating over iterable objects.
+- including: built-in string, Array, array-like objects like NodeList and also map and set.
+
