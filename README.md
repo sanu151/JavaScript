@@ -538,6 +538,28 @@ for (var c of str) {
 
 **Functions in JavaScript**
 
+What are Functions?
+
+*A function is a block of code that performs a specific task*
+
+- A JavaScript function is executed when "something" invokes it (calls it).
+
+- Functions are one of the fundamental building bolcks in JavaScript.
+
+- A function in JavaScript is similar to a procedure-a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output. To use a function, we must define it somewhere in the scope from which we wish to call it.
+
+Declaring and invoking a Function
+
+The syntax to declare and call a function is given below:
+
+```PsudoCode
+function demo() {
+  // code goes here
+} // This is how to declare a function
+
+demo(); // Invoking or calling a function
+```
+
 Parameters and Arguments:
 
 - A function can be defined with a set of parameters that it will take Parameters are generally the values that we want the function to accept
