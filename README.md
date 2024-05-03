@@ -511,3 +511,45 @@ for (var color in colorsArray) {
 - The for of sratement creates a loop iterating over iterable objects.
 - including: built-in string, Array, array-like objects like NodeList and also map and set.
 
+Example1:
+```JavaScript
+// for of loop
+
+var scores = [12, 24, 45, 23];
+
+for (var score of scores) {
+  console.log(score);
+}
+
+// for of loop with index
+for (var [index, value] of scores.entries()) {
+  console.log(index + " : " + value);
+```
+
+Example2:
+```JavaScript
+// for of loop with string
+var str = "Supriyo Das";
+
+for (var c of str) {
+  console.log(c);
+}
+```
+
+**Functions in JavaScript**
+
+Parameters and Arguments:
+
+- A function can be defined with a set of parameters that it will take Parameters are generally the values that we want the function to accept
+
+- Arguments are the values that we pass for those Parameters.
+
+Example:
+```JavaScript
+function add(a, b){
+  console.log(a + b);
+}
+
+add(2, 3); // Arguments
+```
+
