@@ -563,11 +563,11 @@ demo(); // Invoking or calling a function
 Example:
 
 ```JavaScript
-function demo() {
-  console.log("Demo Function");
+function greet() {
+  console.log("Hello World");
 }
 
-demo();
+greet();
 ```
 
 Parameters and Arguments:
