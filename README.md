@@ -406,3 +406,182 @@ Output:
 yaeee! I got the bicycle
 Grade A
 ```
+**The for loop**
+
+- loops are the statements that we can use to control a flow of the program and to do some repeatative.
+
+Example1:
+
+```JavaScript
+// for loop
+for (var i = 0; i < 10; i++) {
+  console.log("Hello World");
+}
+```
+
+Example2:
+```JavaScript
+var arr = [2, 3, 4, 5, 6, 7, 8, 9];
+
+var squreArray = [];
+
+for (var i = 0; i < arr.length; i++) {
+  squreArray.push(arr[i] * arr[i]);
+}
+
+console.log(squreArray);
+```
+
+**The while loop**
+
+- Awhile loop evaluated the condition inside the parenthesis ().
+
+- If the condithin evaluates to true, the code inside the while loop is executed.
+
+- The condithin is evaluated again.
+
+- This process continues untill the condition is false.
+- When the condition evaluates to false, the loop stops.
+
+Example1:
+```JavaScript
+var i = 0;
+
+while (i <= 10) {
+  console.log(i);
+  i++;
+}
+```
+
+**The do-while loop**
+
+- A do...while loop in JavaScript is similar to a while loop, but with one key difference: it always executes its code block at least once, and then repeats the loop as long as the specified condition evaluates to true.
+
+```JavaScript
+var i = 11;
+
+do {
+  console.log(i);
+} while (i <= 10);
+```
+
+**for in loop**
+
+- In JavaScript, the for-in loop allows us to loop through the properties of an object.
+
+- The statements of code found within th eloop body will be executed once for each property of the object.
+
+Example1:
+```JavaScript
+// for in loop with object
+
+var colors = {
+  primary: "red",
+  secondary: "yellow",
+  thirdly: "green",
+  fourthly: "blue",
+};
+
+for (var color in colors) {
+  console.log(color + " -> " + colors[color]);
+}
+```
+
+Example2:
+```JavaScript
+// for in loop with Array
+
+var colorsArray = [
+  "violate",
+  "Indigo",
+  "blue",
+  "green",
+  "yellow",
+  "orange",
+  "red",
+];
+
+for (var color in colorsArray) {
+  console.log(color + " -> " + colorsArray[color]);
+}
+```
+
+**for of loop**
+
+- The for of sratement creates a loop iterating over iterable objects.
+- including: built-in string, Array, array-like objects like NodeList and also map and set.
+
+Example1:
+```JavaScript
+// for of loop
+
+var scores = [12, 24, 45, 23];
+
+for (var score of scores) {
+  console.log(score);
+}
+
+// for of loop with index
+for (var [index, value] of scores.entries()) {
+  console.log(index + " : " + value);
+```
+
+Example2:
+```JavaScript
+// for of loop with string
+var str = "Supriyo Das";
+
+for (var c of str) {
+  console.log(c);
+}
+```
+
+**Functions in JavaScript**
+
+What are Functions?
+
+*A function is a block of code that performs a specific task*
+
+- A JavaScript function is executed when "something" invokes it (calls it).
+
+- Functions are one of the fundamental building bolcks in JavaScript.
+
+- A function in JavaScript is similar to a procedure-a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output. To use a function, we must define it somewhere in the scope from which we wish to call it.
+
+Declaring and invoking a Function
+
+The syntax to declare and call a function is given below:
+
+```PsudoCode
+function demo() {
+  // code goes here
+} // This is how to declare a function
+
+demo(); // Invoking or calling a function
+```
+
+Example:
+
+```JavaScript
+function greet() {
+  console.log("Hello World");
+}
+
+greet();
+```
+
+Parameters and Arguments:
+
+- A function can be defined with a set of parameters that it will take Parameters are generally the values that we want the function to accept
+
+- Arguments are the values that we pass for those Parameters.
+
+Example:
+```JavaScript
+function add(a, b){
+  console.log(a + b);
+}
+
+add(2, 3); // Arguments
+```
+
