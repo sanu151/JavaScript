@@ -585,3 +585,20 @@ function add(a, b){
 add(2, 3); // Arguments
 ```
 
+**Functions as Expression**
+
+- In JavaScript, functions can be defined in two ways: function declarations and function expressions. Function expressions allow you to create functions by assigning them to variables or using them within expressions. This makes functions behave like any other value in JavaScript.
+
+Example:
+```JavaScript
+// Function as Expression
+
+var add = function (a, b) {
+  return a + b;
+};
+
+var result = add(4, 5);
+
+console.log(result);
+```
+
