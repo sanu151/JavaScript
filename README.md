@@ -560,6 +560,16 @@ function demo() {
 demo(); // Invoking or calling a function
 ```
 
+Example:
+
+```JavaScript
+function demo() {
+  console.log("Demo Function");
+}
+
+demo();
+```
+
 Parameters and Arguments:
 
 - A function can be defined with a set of parameters that it will take Parameters are generally the values that we want the function to accept
