@@ -602,3 +602,135 @@ var result = add(4, 5);
 console.log(result);
 ```
 
+**Hoisting**
+
+ Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their containing scope during the compile phase, before the code is executed. This means that regardless of where variables and functions are declared within their scope, they are moved to the top of the scope, giving the impression that they are "hoisted" to the top.
+
+There are two main aspects of hoisting in JavaScript:
+
+1. **Variable Hoisting**: Variable declarations (not variable initializations) are hoisted to the top of their containing scope. However, the initialization remains in place.
+
+    ```javascript
+    console.log(x); // undefined
+    var x = 5;
+    ```
+
+    This code is equivalent to:
+
+    ```javascript
+    var x;
+    console.log(x); // undefined
+    x = 5;
+    ```
+
+2. **Function Hoisting**: Function declarations are also hoisted to the top of their containing scope. This means that you can call a function before it's declared in the code.
+
+    ```javascript
+    foo(); // "Hello, I am foo!"
+
+    function foo() {
+        console.log("Hello, I am foo!");
+    }
+    ```
+
+    This code works because the function declaration of `foo` is hoisted to the top, allowing you to call it before its actual declaration in the code.
+
+However, it's important to note that function expressions (e.g., using `var`, `let`, or `const` to assign a function to a variable) are not hoisted in the same way as function declarations. Only the variable declaration is hoisted, not the function assignment.
+
+```javascript
+// This will throw a TypeError: foo is not a function
+foo();
+
+var foo = function() {
+    console.log("Hello, I am foo!");
+};
+```
+
+In this case, the variable `foo` is hoisted, but its value (the function) is not. Therefore, trying to call `foo()` before the function assignment will result in a TypeError.
+
+**ES6 - EcmaScript 2015**
+
+**ECMA** - *Eupropean Computer Manufacturer Association*
+
+* ES6 or ECMAScript 2015 is the 6th and major edition of the ECMAScript language specification standard. It defines the standard for the implementation of JavaScript and it has become much more popular than the previous edition ES5.
+
+* ES6 comes with significant changes to the JavaScript language. It brought several new features like let and const keyword, rest and spread operators, template literals, classes, modules and many other enhancements to make JavaScript programming easier and more functional.
+
+**ES6 Feature**
+
+1. let and the const keyword
+2. Arrow Function
+3. Default Parameter
+4. Template Literals and Multi Line Strings
+5. destructuring
+6. Higher Order Functions
+7. Promises
+8. Classes
+9. Modules
+
+**Problems with var**
+
+The main problems with `var` in JavaScript stem from its handling of scope and hoisting. Here's a breakdown of the key issues:
+
+**1. Lack of Block Scope:**
+
+- `var` variables are scoped to their nearest function, not the code block (like `if` statements or loops) where they are declared.
+  - This can lead to unexpected behavior if you intend a variable to be local to a specific block.
+
+**Example:**
+
+```javascript
+for (var i = 0; i < 3; i++) {
+  console.log(i); // This will print 3 three times, not just inside the loop.
+}
+
+console.log(i); // Here, i is still accessible and holds the value 3.
+```
+
+**2. Hoisting Issues:**
+
+- `var` declarations are hoisted to the top of their function scope. This creates the illusion that you can use a variable before it's declared.
+  - While you can call functions before their declaration, using `var` variables before initialization will result in `undefined`.
+
+**Example:**
+
+```javascript
+console.log(message); // This will print undefined
+
+var message = "Hoisted!";
+```
+
+**3. Re-declaration and Shadowing:**
+
+- You can re-declare `var` variables within the same scope, which can lead to confusion and unexpected behavior.
+  - This can also lead to variable shadowing, where a local variable with the same name hides a global or outer scope variable.
+
+**Example:**
+
+```javascript
+var message = "global";
+
+function saySomething() {
+  var message = "local";
+  console.log(message); // This will print "local"
+}
+
+saySomething();
+console.log(message); // This will still print "global"
+```
+
+**Solutions and Best Practices:**
+
+To avoid these problems, it's generally recommended to use `let` and `const` instead of `var`.
+
+- `let` variables have block scope, so they are only accessible within the block they are declared in.
+- `const` variables are similar to `let` but cannot be re-assigned after declaration.
+
+By using `let` and `const`, your code becomes more predictable and easier to reason about, especially in larger projects.
+
+Here are some additional tips:
+
+- Always declare variables at the top of their scope for better readability.
+- Avoid relying on hoisting behavior to prevent bugs.
+- If you need to support older browsers that don't understand `let` and `const`, you can use tools like Babel to transpile your code.
+
