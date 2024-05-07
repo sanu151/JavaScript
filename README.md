@@ -986,3 +986,92 @@ console.log(name, firstName, lastName, age); // Output: name Alice Bob age
 
 By effectively using array destructuring, you can write cleaner, more readable, and less error-prone code when working with arrays in JavaScript.
 
+**Destructuring Object**
+
+Destructuring in Javascript is a shorthand way to extract values from objects or arrays and assign them to variables. Particularly useful when you only need specific properties from an object.
+
+Here's a breakdown of destructuring objects:
+
+**Basic Destructuring:**
+
+Imagine an object like this:
+
+```javascript
+const person = {
+  name: "Alice",
+  age: 30,
+  city: "New York"
+}
+```
+
+Normally, you'd access the properties like this:
+
+```javascript
+const name = person.name;
+const age = person.age;
+```
+
+Destructuring allows achieving the same outcome in a cleaner way:
+
+```javascript
+const { name, age } = person;
+```
+
+Here, on the left side, we define an object pattern that mirrors the structure of the object we want to destructure. The variable names (`name` and `age`) match the property names in the original object. This creates new variables with the corresponding values from the object.
+
+**Destructuring with Renaming:**
+
+What if you want to use a different variable name for a property? Destructuring allows renaming during the assignment:
+
+```javascript
+const { name: fullName, age } = person;
+```
+
+Here, we're destructuring the `name` property but assigning it to a new variable named `fullName`.
+
+**Default Values:**
+
+Sometimes, a property might not exist in the object. You can provide a default value during destructuring:
+
+```javascript
+const { name = "John Doe", age } = person; // John Doe if name is missing
+```
+
+This assigns "John Doe" to `name` if the `name` property is absent in the original object.
+
+**Destructuring Nested Objects:**
+
+Destructuring works with nested objects too. Imagine the `person` object has an address property:
+
+```javascript
+const person = {
+  name: "Alice",
+  age: 30,
+  city: "New York",
+  address: {
+    street: "Main St",
+    number: 100
+  }
+}
+```
+
+To access the `street` property within the nested `address` object:
+
+```javascript
+const { address: { street } } = person;
+```
+
+Here, we create another nested object pattern on the left to match the structure of the nested object.
+
+**Rest Operator:**
+
+The rest operator (`...`) can be used to capture remaining properties into a single object:
+
+```javascript
+const { name, ...rest } = person; // rest will contain { age: 30, city: "New York", address: {...}}
+```
+
+This is useful when you only need a specific property and want to group the rest into another object.
+
+Destructuring improves code readability and makes it easier to work with objects, especially when dealing with nested data structures.
+
