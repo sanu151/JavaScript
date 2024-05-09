@@ -1158,3 +1158,95 @@ calc.divition(15, 6);
 
 By effectively using modules and modularity principles, you can write cleaner, more maintainable, and scalable JavaScript applications.
 
+**Functional Programming**
+
+Functional programming is a programming paradigm designed to handle functions in a better way in JS (mainly pure functions)
+
+JavaScript is a multi-paradigm lannguage. We can use object-oriented, procedural and functional programming paradigms all at the same time in JavaScript
+
+Functional programming has a few important concepts that we need to know and understand. By implementing these concepts in our applications, we will end up with more functional code. this will make a huge difference in our application, makeing it more readable, usable, managable and easy to test.
+
+**Key Features of Functional**
+
+*Programming*
+1. Imperative an Declarative way of writing code.
+2. Pure functions and what are Side effects?
+3. Higher Order Functions (map, filter, reduce, etc)
+4. Composition
+5. Closures
+6. Currying
+
+**Impreative and Declerative way to write code**
+
+In JavaScript, there are two main approaches to writing code: imperative and declarative. Here's a breakdown of each concept and how they differ:
+
+**Imperative Programming:**
+
+* Focuses on "how" to achieve a specific outcome.
+* Provides step-by-step instructions for the computer to execute.
+* Often uses control flow statements like `if`, `for`, and `while` loops to control the flow of execution.
+* Mutates the state of variables directly.
+
+**Example (Imperative):**
+
+```javascript
+let numbers = [1, 2, 3, 4, 5];
+let doubledNumbers = [];
+
+for (let i = 0; i < numbers.length; i++) {
+  doubledNumbers.push(numbers[i] * 2);
+}
+
+console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]
+```
+
+**Explanation:**
+
+1. We define an array `numbers`.
+2. We initialize an empty array `doubledNumbers` to store the results.
+3. We use a `for` loop to iterate through each element in the `numbers` array.
+4. Inside the loop, we calculate the doubled value and push it into the `doubledNumbers` array.
+5. We print the `doubledNumbers` array containing the doubled values.
+
+**Declarative Programming:**
+
+* Focuses on "what" the desired outcome is, leaving the "how" to the underlying system.
+* Often uses functions and expressions to describe the desired state or transformation.
+* Avoids mutating existing data structures and instead creates new ones with the desired result.
+
+**Example (Declarative):**
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+const doubledNumbers = numbers.map(number => number * 2);
+
+console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]
+```
+
+**Explanation:**
+
+1. We define an array `numbers`.
+2. We use the `map` method on the `numbers` array.
+3. The `map` method takes a callback function that defines the transformation for each element.
+4. Inside the callback, we multiply the current element (`number`) by 2 and return the result.
+5. `map` creates a new array (`doubledNumbers`) containing the doubled values.
+6. We print the `doubledNumbers` array with the results.
+
+**Key Differences:**
+
+* **Control Flow:** Imperative code explicitly controls the flow using loops and conditionals, while declarative code relies on higher-order functions (like `map`) to handle iteration and transformations.
+* **Data Mutation:** Imperative code often modifies existing variables, while declarative code tends to create new data structures with the desired outcome.
+* **Readability:** Declarative code can sometimes be more concise and easier to read, especially for complex operations.
+
+**Choosing the Right Approach:**
+
+* **Simple Tasks:** Imperative code might be more straightforward for basic tasks.
+* **Complex Logic:** Declarative code can be cleaner and easier to reason about for complex data transformations.
+* **Functional Programming:** If you're using functional programming principles in JavaScript, declarative style is often preferred.
+
+**Pure Functions and Side Effects**
+
+A **pure function** is a function which:
+> Given the same input, always returns the same output.
+> Produces no side effects.
+
