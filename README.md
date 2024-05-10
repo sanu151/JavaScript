@@ -1278,3 +1278,11 @@ console.log(add1(3, 4));
 console.log(add1(3, 4));
 console.log(add1(3, 4));
 ```
+
+**Callback functions**
+
+* In JavaScript, a callback function is a function that is passed into another function as an argument. This function can then be involed at a later stage of time.
+* Since in JavaScript, functions are objects, functions can be passed as arguments.
+
+Example : 
+```JavaScript
