@@ -1284,5 +1284,37 @@ console.log(add1(3, 4));
 * In JavaScript, a callback function is a function that is passed into another function as an argument. This function can then be involed at a later stage of time.
 * Since in JavaScript, functions are objects, functions can be passed as arguments.
 
-Example : 
+Example 1: 
 ```JavaScript
+// Callback function
+
+const printName = (firstName, lastName) => {
+  firstName("Supriyo");
+  lastName("Das");
+};
+
+const firstName = (fn) => {
+  console.log(fn);
+};
+
+const lastName = (ln) => {
+  console.log(ln);
+};
+
+printName(firstName, lastName); // Send functions (firstName and lastName) as arguments.
+```
+
+Example 2 : 
+```JavaScript
+// Callback Function
+
+const even = (n) => n % 2 === 0;
+
+const printEven = (even, num) => {
+  let isEven = even(num);
+
+  console.log(`The number ${num} is an Even number ${isEven}`);
+};
+
+printEven(even, 15);
+```
