@@ -1318,3 +1318,8 @@ const printEven = (even, num) => {
 
 printEven(even, 15);
 ```
+
+**Hogher Order Function**
+
+Higher order functions are functions that operate on other functions, eithe by taking them as arguments or by returning them. In simple words, A higher-Order functon is a function that receives a function as a argument or returns the function as output.
+
