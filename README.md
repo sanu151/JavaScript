@@ -1319,7 +1319,59 @@ const printEven = (even, num) => {
 printEven(even, 15);
 ```
 
-**Hogher Order Function**
+**Hogher Order Function(map and forEach)**
 
 Higher order functions are functions that operate on other functions, eithe by taking them as arguments or by returning them. In simple words, A higher-Order functon is a function that receives a function as a argument or returns the function as output.
+
+**Map** 
+- Map will loop through every element of our array and will perform specific operations that we have provided.
+- Map method will always return us a new array with our results.
+
+Example1:
+
+```JavaScript
+// Higher-Order Function
+
+const arr = [1, 2, 3, 4, 5];
+
+// Map
+const sqrArray = arr.map(function (n) {
+  return n * n;
+});
+
+console.log(sqrArray);
+```
+
+Example2 :
+
+```JavaScript
+// Convert Rupee to Doller my account transaction
+
+const transactionRs = [1000, 3000, 4000, 2000, -898, -3800, -4500];
+const inrToDoller = 80;
+
+const transactionDoller = transactionRs.map((n) => {
+  return Number((n / inrToDoller).toFixed(2));
+});
+
+console.log(transactionDoller);
+```
+
+**forEach**
+
+- The forEach() method is a built-in function in JavaScript that iterates over the elements of an array. It executes a provided function once for each element in the array, allowing you to process or transform the elements as needed.
+- It doesn't return a value
+
+Example:
+
+```JavaScript
+// forEach
+
+const inr = [1000, 3000, 4000, 2000, -898, -3500, -4325];
+const inrToDoller = 80;
+
+const doller = inr.forEach((amount) => {
+  console.log(Number(amount / inrToDoller).toFixed(2)); // forEach cann't return a value
+});
+```
 
