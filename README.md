@@ -1432,3 +1432,8 @@ let resultEvery = transaction.every((n) => {
 console.log(resultEvery); // false
 ```
 
+**filter method**
+> Filter returns a new array it will return all those elements that matches the specific condition
+> If the condition is true it will return the element for that condition and if it is false it will discard the element.
+
+```JavaScript
