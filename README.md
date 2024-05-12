@@ -1387,9 +1387,48 @@ let firstWithdrawl = transaction.find((n) => {
   return n < 0;
 });
 
-console.log(firstWithdrawl);
+console.log(firstWithdrawl); // -898
 ```
 
 **findIndex** : returns the index of first element of an array that satisfy the conditions.
 
 ```JavaScript
+//findIndex 
+
+let transaction = [1000, 3000, 2000, -898, -1200, 4000, -3600];
+
+let firstTransnsactionIndex = transaction.findIndex((n) => {
+  return n < 0;
+});
+
+console.log(firstTransnsactionIndex); // 3
+```
+
+**some method** : 
+> To get true or false based on a condition
+> It will return true if even one statement satisfies the condition.
+
+**every method**
+> To get true or false based on a condition
+> It will return true if all statement satisfies the condition.
+
+```JavaScript
+// some and every method
+
+let transaction = [1000, -3000, 2000, 4000, -899, 1200];
+
+// some method
+let resultSome = transaction.some((n) => {
+  return n < 0;
+});
+
+console.log(resultSome); // true
+
+// every method
+let resultEvery = transaction.every((n) => {
+  return n < 0;
+});
+
+console.log(resultEvery); // false
+```
+
