@@ -1437,3 +1437,18 @@ console.log(resultEvery); // false
 > If the condition is true it will return the element for that condition and if it is false it will discard the element.
 
 ```JavaScript
+// filter method
+
+let arr = [2, 5, 6, 8, 3, 12, 43, 25, 33, 22];
+
+let evenArray = arr.filter((n) => {
+  return n % 2 == 0;
+});
+
+console.log(evenArray);
+```
+
+**Reduce method**
+> Reduce method always returns a single result.
+
+```JavaScript
