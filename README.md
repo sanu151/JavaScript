@@ -1375,3 +1375,21 @@ const doller = inr.forEach((amount) => {
 });
 ```
 
+**find, findindex, some and every**
+
+**find** : returns the first element of an array that satiasfy the condition.
+
+```JavaScript
+// find 
+const transaction = [1000, 3000, 4000, 2000, -898, 1200, -3600, -1500];
+
+let firstWithdrawl = transaction.find((n) => {
+  return n < 0;
+});
+
+console.log(firstWithdrawl);
+```
+
+**findIndex** : returns the index of first element of an array that satisfy the conditions.
+
+```JavaScript
