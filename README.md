@@ -1452,3 +1452,72 @@ console.log(evenArray);
 > Reduce method always returns a single result.
 
 ```JavaScript
+// Some of every element in an Array
+
+let arr = [1, 2, 3, 4, 10];
+
+let sumArr = arr.reduce((acc, value) => {
+  // accumulator, value
+  let result = acc + value;
+  return result;
+}, 0); // Initial accumulator = 0;
+
+console.log(sumArr); // 20
+```
+
+**Chaining Methods**
+> Chaining is a programming technique that allows us to call multiple methods on the same object consecutively, with each method call returning the object itself. This creates a chain-like syntax that can improve readability and maintainability of our code.
+
+```JavaScript
+// Chaining Method
+let arr = [
+  { name: "A", age: 13, gender: "M" },
+  { name: "B", age: 34, gender: "F" },
+  { name: "C", age: 17, gender: "M" },
+  { name: "D", age: 22, gender: "F" },
+  { name: "E", age: 42, gender: "M" },
+  { name: "F", age: 14, gender: "M" },
+  { name: "G", age: 28, gender: "F" },
+  { name: "H", age: 16, gender: "F" },
+];
+
+// Ages of all the Man(Male)
+// Chaining map method after filter method.
+let ageOfMales = arr
+  .filter((obj) => {
+    return obj.gender == "M";
+  })
+  .map((male) => {
+    return male.age;
+  });
+```
+
+**Object Oriented JavaScript**
+
+Object-orinted programming (OOP) is a computer programming model that organizes softwate design around data, or objects, rather than functions and logic. An object can be defined as a data fild that has unique attributes and behavior.
+
+The Four Pillars of OOPs are : 
+1. *Encapsulation*
+2. *Absrtaction*
+3. *Polymorphism*
+4. *Inheritance*
+
+JavaScript is not actually an Object Oriented Language, but we can write objcet oriented code by using something called as a Prototype object.
+
+**OOPs Module** :
+1. this keyword
+2. constructor functions
+3. classes
+4. classical inheritance
+5. encapsulation
+6. polymorphism
+7. prototype object
+8. prototypal inheritance
+9. call apply bind
+
+**The `this` keyword in JS**
+`this` keyword refers to an object that is executing the current piece of code. It references the object that is executing the current function. If the function being referenced is a regular function, `this` references the global object. If the function that is being referenced is a method in an object, `this` references the object itself.
+
+The JavaScript `this` keyword is one of the most widely used keywords, It can seem complex at first, but once we start using `this` keyword, everything will become clear.
+
+**Non-strict and strict mode**
