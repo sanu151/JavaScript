@@ -1521,3 +1521,61 @@ JavaScript is not actually an Object Oriented Language, but we can write objcet 
 The JavaScript `this` keyword is one of the most widely used keywords, It can seem complex at first, but once we start using `this` keyword, everything will become clear.
 
 **Non-strict and strict mode**
+
+JavaScript offers two main ways to run your code: non-strict mode (sometimes referred to as "sloppy mode") and strict mode. They differ in how they handle errors and certain syntax.
+
+**Non-strict mode** is the default behavior in JavaScript. It allows for more flexible coding but can lead to errors that might go unnoticed. Here's what you can encounter in non-strict mode:
+
+* **Silent errors:** Certain mistakes might not cause any errors and lead to unexpected behavior.
+* **Accidental globals:** Using an undeclared variable creates a global variable by default.
+* **Duplicate function parameters:** Functions can have duplicate parameter names, causing confusion.
+* **Deleting non-configurable properties:** You can delete properties even if they are not meant to be changed.
+
+Example:
+```JavaScript
+// Non-strict mode
+
+a = 10;
+
+console.log(a); // 10 will be printed
+```
+
+**Strict mode**, on the other hand, enforces stricter rules and helps catch errors early on. Here are some benefits of using strict mode:
+
+* **Catches errors:** Strict mode throws errors for things like undeclared variables, making debugging easier.
+* **Prevents accidental globals:** Using a variable before declaration results in an error.
+* **Disallows duplicate function parameters:** Function parameters must have unique names.
+* **Protects properties:** You cannot delete properties that are marked as non-configurable.
+
+Here's how to enable strict mode:
+
+```javascript
+"use strict";
+
+// Your code here will run in strict mode
+```
+
+You can enable strict mode at the beginning of a script, a function, or even a block of code.
+
+Example:
+```JavaScript
+"use strict";
+
+a = 10;
+
+console.log(a); // ReferenceError: a is not defined
+```
+```JavaScript
+"use strict";
+
+let a = 10;
+
+console.log(a); // 10 will be printed
+```
+
+**Choosing between non-strict and strict mode:**
+
+* **Strict mode is generally recommended** for modern JavaScript development. It helps write cleaner, more reliable code.
+* **Non-strict mode might be used** for compatibility with older code that relies on its looser behavior. However, it's advisable to migrate such code to strict mode eventually.
+
+Remember, strict mode coexists with non-strict mode. You can gradually incorporate strict mode into your codebase for a smoother transition.
