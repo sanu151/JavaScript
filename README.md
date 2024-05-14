@@ -1515,11 +1515,6 @@ JavaScript is not actually an Object Oriented Language, but we can write objcet 
 8. prototypal inheritance
 9. call apply bind
 
-**The `this` keyword in JS**
-`this` keyword refers to an object that is executing the current piece of code. It references the object that is executing the current function. If the function being referenced is a regular function, `this` references the global object. If the function that is being referenced is a method in an object, `this` references the object itself.
-
-The JavaScript `this` keyword is one of the most widely used keywords, It can seem complex at first, but once we start using `this` keyword, everything will become clear.
-
 **Non-strict and strict mode**
 
 JavaScript offers two main ways to run your code: non-strict mode (sometimes referred to as "sloppy mode") and strict mode. They differ in how they handle errors and certain syntax.
@@ -1579,3 +1574,48 @@ console.log(a); // 10 will be printed
 * **Non-strict mode might be used** for compatibility with older code that relies on its looser behavior. However, it's advisable to migrate such code to strict mode eventually.
 
 Remember, strict mode coexists with non-strict mode. You can gradually incorporate strict mode into your codebase for a smoother transition.
+
+**The `this` keyword in JS**
+
+`this` keyword refers to an object that is executing the current piece of code. It references the object that is executing the current function. If the function being referenced is a regular function, `this` references the global object. If the function that is being referenced is a method in an object, `this` references the object itself.
+
+The JavaScript `this` keyword is one of the most widely used keywords, It can seem complex at first, but once we start using `this` keyword, everything will become clear.
+
+
+`this` keyword -> Node.js in Non-Strict mode:
+
+```JavaScript
+console.log(this); // {}
+
+function displayThis() {
+  console.log(this);
+}
+
+displayThis(); // Global Object
+
+let myObj = {
+  name: "Supriyo Das",
+  age: 36,
+
+  myfn: function () {
+    console.log(this);
+  },
+};
+
+myObj.myfn(); // { name: 'Supriyo Das', age: 36, myfn: [Function: myfn] }
+
+let myObj1 = {
+  name: "Supriyo Das",
+  age: 36,
+
+  myfn1: function () {
+    function myfn2() {
+      console.log(this);
+    }
+    myfn2();
+  },
+};
+
+myObj1.myfn1(); // Global Object
+```
+
