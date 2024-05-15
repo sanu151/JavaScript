@@ -2,24 +2,24 @@
 
 "use strict";
 
-// console.log(this); // window obj
+console.log(this); // window obj
 
-// function displayThis() {
-//   console.log(this);
-// }
+function displayThis() {
+  console.log(this);
+}
 
-// displayThis(); // undefined
+displayThis(); // undefined
 
-// let myObj = {
-//   name: "Supriyo Das",
-//   age: 36,
+let myObj = {
+  name: "Supriyo Das",
+  age: 36,
 
-//   myfn: function () {
-//     console.log(this);
-//   },
-// };
+  myfn: function () {
+    console.log(this);
+  },
+};
 
-// myObj.myfn(); // {name: 'Supriyo Das', age: 36, myfn: ƒ}
+myObj.myfn(); // {name: 'Supriyo Das', age: 36, myfn: ƒ}
 
 let myObj1 = {
   name: "Supriyo Das",
