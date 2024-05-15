@@ -1659,3 +1659,115 @@ let myObj1 = {
 myObj1.myfn1(); // undefined
 ```
 
+`this` keyword Non Strict in browser
+
+index.html
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="this2.js"></script>
+  </body>
+</html>
+```
+
+this2.js
+```JavaScript
+/ this keyword Non Strict mode in browser
+
+console.log(this);   // window obj
+
+function displayThis() {
+  console.log(this);
+}
+
+displayThis();   // window obj
+
+let myObj = {
+  name: "Supriyo Das",
+  age: 36,
+
+  myfn: function () {
+    console.log(this);
+  },
+};
+
+myObj.myfn();   // object itself
+
+let myObj1 = {
+  name: "Supriyo Das",
+  age: 36,
+
+  myfn1: function () {
+    function myfn2() {
+      console.log(this);
+    }
+    myfn2();
+  },
+};
+
+myObj1.myfn1(); // Window obj
+```
+`this` keyword strict monde in browser
+
+index.html
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="this3.js"></script>
+  </body>
+</html>
+```
+
+```JavaScript
+// this keyword Strict mode in browser
+
+"use strict";
+
+// console.log(this); // window obj
+
+// function displayThis() {
+//   console.log(this);
+// }
+
+// displayThis(); // undefined
+
+// let myObj = {
+//   name: "Supriyo Das",
+//   age: 36,
+
+//   myfn: function () {
+//     console.log(this);
+//   },
+// };
+
+// myObj.myfn(); // {name: 'Supriyo Das', age: 36, myfn: ƒ}
+
+let myObj1 = {
+  name: "Supriyo Das",
+  age: 36,
+
+  myfn1: function () {
+    function myfn2() {
+      console.log(this);
+    }
+    myfn2();
+  },
+};
+
+myObj1.myfn1(); // undefined
+```
+
+![this](https://github.com/sanu151/JavaScript/assets/68671274/23fcf30c-3093-4010-9f31-d493a39c21e5)
+
