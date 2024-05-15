@@ -1730,6 +1730,7 @@ index.html
 </html>
 ```
 
+this3.js
 ```JavaScript
 // this keyword Strict mode in browser
 
