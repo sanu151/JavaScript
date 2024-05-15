@@ -1770,5 +1770,9 @@ let myObj1 = {
 myObj1.myfn1(); // undefined
 ```
 
+`this` keyword in various mode
+
 ![this](https://github.com/sanu151/JavaScript/assets/68671274/23fcf30c-3093-4010-9f31-d493a39c21e5)
+
+**Constructor Function**
 
