@@ -1807,3 +1807,43 @@ student2.studentData(); // I am Rupa Das, I am doing BBA from ABC University, Th
 ```
 
 Constructor functions are a fundamental concept in object-oriented programming as they provide a mechanism to create objects with specific properties and behaviors.
+
+**Classes in JavaScript**
+
+In JavaScript, classes provide a more structured and syntactic sugar way to achieve what constructor functions do. They act as blueprints for creating objects with similar properties and methods.
+
+Here's a breakdown of classes in JavaScript:
+
+**Similarities to Constructor Functions:**
+
+* **Blueprints for Objects:** Like constructor functions, classes define the properties and behaviors that objects of that class will have.
+* **`this` Keyword:** The `this` keyword inside a class also refers to the new object being created.
+
+**Differences and Advantages of Classes:**
+
+* **Syntax:** Classes use a cleaner and more familiar syntax compared to constructor functions.
+* **Constructors:** Classes still have constructors (a special method named `constructor`), but they are defined within the class itself.
+* **Methods:** Methods are defined directly inside the class body, improving readability and organization.
+
+```JavaScript
+// JavaScript Classes
+
+class Persion {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  welcome() {
+    console.log(`Welcome ${this.name}`);
+  }
+}
+
+let persion1 = new Persion("Supriyo Das", 36);
+let persion2 = new Persion("Gobinda Pal", 22);
+
+console.log(persion1); // Persion { name: 'Supriyo Das', age: 36 }
+
+persion2.welcome(); // Welcome Gobinda Pal
+```
+
