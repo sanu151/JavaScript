@@ -1847,3 +1847,7 @@ console.log(persion1); // Persion { name: 'Supriyo Das', age: 36 }
 persion2.welcome(); // Welcome Gobinda Pal
 ```
 
+**Inheritance**
+
+Methods & Properties from base class can be put down or can be passed into derived class.
+
