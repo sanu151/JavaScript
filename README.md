@@ -1776,3 +1776,34 @@ myObj1.myfn1(); // undefined
 
 **Constructor Function**
 
+In object-oriented programming, a constructor function is a special function that is used to create and initialize new objects of a certain class. It defines the blueprint for the objects of that class, specifying the properties and behaviors that they will share.
+
+Here are some key points about constructor functions:
+
+* **Creation and Initialization:** When a constructor function is called using the `new` keyword, it creates a new object and initializes its state by assigning values to its properties.
+* **`this` Keyword:** Inside the constructor function, the `this` keyword refers to the new object being created. It is used to assign property values to the object.
+* **Common Naming Convention:** Constructor functions are typically named with a capital letter to distinguish them from regular functions.
+
+```JavaScript
+// Constractor Function
+
+function students(_name, _stream, _semister) {
+  this.name = _name;
+  this.stream = _stream;
+  this.semister = _semister;
+
+  this.studentData = () => {
+    console.log(
+      `I am ${this.name}, I am doing ${this.stream} from ABC University, This is my ${this.semister} semister`
+    );
+  };
+}
+
+let student1 = new students("Supriyo Das", "BCA", "VI");
+let student2 = new students("Rupa Das", "BBA", "III");
+
+student1.studentData();  // I am Supriyo Das, I am doing BCA from ABC University, This is my VI semister
+student2.studentData(); // I am Rupa Das, I am doing BBA from ABC University, This is my III semister
+```
+
+Constructor functions are a fundamental concept in object-oriented programming as they provide a mechanism to create objects with specific properties and behaviors.
