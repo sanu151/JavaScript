@@ -1851,3 +1851,54 @@ persion2.welcome(); // Welcome Gobinda Pal
 
 Methods & Properties from base class can be put down or can be passed into derived class.
 
+Inheritance in JavaScript is a mechanism that allows you to create new classes (child classes) that inherit properties and methods from existing classes (parent classes). This promotes code reusability and simplifies the creation of related objects.
+
+There are two main ways to achieve inheritance in JavaScript:
+
+1. **Prototype-based Inheritance:** This is the traditional way of achieving inheritance in JavaScript. In this approach, objects inherit properties and methods from their prototype objects. Each object has an internal hidden link to another object called its prototype. When you try to access a property or method on an object, JavaScript first looks for it on the object itself. If it's not found there, it then looks for it on the object's prototype, and then on the prototype's prototype, and so on until it's found or reaches the end of the prototype chain (which ends at null).
+
+2. **Class-based Inheritance (ES6):** Introduced in ECMAScript 2015 (ES6), JavaScript introduced a class-based syntax for inheritance that is similar to how inheritance works in other class-based languages like Java or C++. Here, the `extends` keyword is used to create a child class that inherits from a parent class. The child class can access the properties and methods of the parent class and can also add its own.
+
+Example:
+```JavaScript
+// Inheritance in JavaScript
+
+class Animal {
+  constructor(_species, _sound, _legs) {
+    this.species = _species;
+    this.sound = _sound;
+    this.legs = _legs;
+  }
+}
+
+class cat extends Animal {
+  constructor(_species, _sound, _legs, _name, _age, _color) {
+    super(_species, _sound, _legs);
+    this.name = _name;
+    this.age = _age;
+    this.color = _color;
+  }
+
+  makeSound() {
+    console.log(`${this.species} sounds ${this.sound}`);
+  }
+}
+
+let myPet = new cat("Cat", "Meow", "Four", "Newton", 2, "White");
+
+console.log(myPet);
+
+myPet.makeSound();
+```
+output:
+```
+cat {
+  species: 'Cat',
+  sound: 'Meow',
+  legs: 'Four',
+  name: 'Newton',
+  age: 2,
+  color: 'White'
+}
+Cat sounds Meow
+```
