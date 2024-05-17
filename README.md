@@ -1948,3 +1948,53 @@ Employee {
 }
 Welcome Ratul
 ```
+
+**Polymorphism**
+
+The word "polymorphism" comes from the Greek words "poly" meaning many and "morph" meaning form. So, literally, it means "having many forms".
+
+In computer science, and especially in object-oriented programming, polymorphism refers to the ability of objects to respond differently to the same message. This message can be a method call, an operator, or any interaction with the object.
+
+Here's how polymorphism helps:
+
+* **Flexibility:** Code becomes more flexible as you can treat objects of different types in a similar way if they respond to the same message.
+* **Code Reusability:** By defining generic behaviors in a base class, subclasses can inherit and potentially specialize them, reducing code duplication.
+* **Maintainability:** Polymorphism can make code easier to maintain as changes to a base class behavior can propagate to its subclasses automatically.
+
+Example:
+
+```JavaScript
+// Polymorphism in JavaScript
+
+class Animal {
+  sound() {
+    console.log(`Animal make differente Sound`);
+  }
+}
+
+class Cat {
+  sound() {
+    console.log("Cat Mews");
+  }
+}
+
+class Dog {
+  sound() {
+    console.log("Dog Barks");
+  }
+}
+
+let animal1 = new Animal();
+let cat1 = new Cat();
+let dog1 = new Dog();
+
+animal1.sound();
+cat1.sound();
+dog1.sound();
+```
+Output:
+```
+Animal make differente Sound
+Cat Mews
+Dog Barks
+```
