@@ -1998,3 +1998,57 @@ Animal make differente Sound
 Cat Mews
 Dog Barks
 ```
+
+**Encapsulation**
+
+Encapsulation in JavaScript is a technique to bundle data (properties) and the functions (methods) operating on that data within a single unit, typically a class. It promotes data protection, code reusability, and maintainability.
+
+Here's why encapsulation is important in JavaScript:
+
+* **Data Protection:** By controlling access to properties, you can prevent them from being accidentally modified from outside the class.
+* **Code Reusability:** Classes act as blueprints for creating objects with similar properties and behaviors.
+* **Maintainability:** Encapsulated code is easier to understand and modify as changes to internal implementation details are isolated within the class.
+
+While JavaScript doesn't have strict keywords like `private` or `public` for access control, there are ways to achieve encapsulation:
+
+1. **Closures:** A closure is a function that can access variables from its outer scope even after the outer function has returned. This allows you to create private variables within a constructor function that can only be accessed by methods defined within the same closure.
+
+2. **Classes (ES6+):** Classes introduced in ECMAScript 6 (ES6) provide a more traditional object-oriented approach. While properties are still public by default, you can simulate private properties using weak maps or symbol properties. Additionally, getter and setter methods offer controlled access to properties.
+
+Here are some resources to explore further:
+
+* **Closures for Encapsulation:** [https://medium.com/@licaretraul/closure-in-javascript-6b9087ec3108](https://medium.com/@licaretraul/closure-in-javascript-6b9087ec3108)
+* **Encapsulation with Classes:** [https://www.javatpoint.com/javascript-oops-encapsulation](https://www.javatpoint.com/javascript-oops-encapsulation)
+
+Example
+```JavaScript
+// Encapsulation
+
+class Person {
+  constructor(_name, _age) {
+    var name = _name;
+    var age = _age;
+  }
+  // Encapsulate values using getting and setting method
+  getName() {
+    return this.name;
+  }
+  setName(_name) {
+    this.name = _name;
+  }
+  getAge() {
+    return this.age;
+  }
+  setAge(_age) {
+    this.age = _age;
+  }
+}
+
+let person1 = new Person();
+person1.setName("Supriyo");
+person1.setAge(36);
+
+// person1 values are encapsulated and can't change using getName method.
+console.log(person1.getName());
+console.log(person1.getAge());
+```
