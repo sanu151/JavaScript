@@ -2052,3 +2052,6 @@ person1.setAge(36);
 console.log(person1.getName());
 console.log(person1.getAge());
 ```
+
+**Prototype and Prototype Inharitance**
+
