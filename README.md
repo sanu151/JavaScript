@@ -2125,3 +2125,4 @@ Here are some resources for further exploration:
 **Prototypical inharitance chain**
 
 ![image](https://github.com/sanu151/JavaScript/assets/68671274/594e2174-8048-406d-b264-650836b722b5)
+
