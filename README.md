@@ -2122,3 +2122,6 @@ Here are some resources for further exploration:
 * [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 * [https://www.freecodecamp.org/news/all-you-need-to-know-to-understand-javascripts-prototype-a2bff2d28f03/](https://www.freecodecamp.org/news/all-you-need-to-know-to-understand-javascripts-prototype-a2bff2d28f03/)
 
+**Prototypical inharitance chain**
+
+![image](https://github.com/sanu151/JavaScript/assets/68671274/594e2174-8048-406d-b264-650836b722b5)
