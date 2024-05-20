@@ -2055,3 +2055,36 @@ console.log(person1.getAge());
 
 **Prototype and Prototype Inharitance**
 
+In Object-Oriented Programming (OOP), a prototype is a blueprint or an object that serves as a base for creating other objects. These other objects inherit properties and methods from the prototype.
+
+JavaScript, however, takes a different approach to OOP compared to languages like Java or C++. JavaScript uses a prototype-based inheritance model. Here's how prototypes work in JavaScript:
+
+1. **Every Function has a Prototype:**  In JavaScript, every function (including constructor functions) has a property called `prototype`. This prototype object is used to attach properties and methods that will be shared by all instances (objects) created using that function.
+
+2. **Prototype Chain:** When you create an object from a constructor function, that object gets linked to the constructor's prototype through a hidden property (usually denoted by `__proto__`). This creates a prototype chain.
+
+3. **Property Lookup:** When you try to access a property on an object, JavaScript first looks for it on the object itself. If the property isn't found there, it then follows the prototype chain and searches the prototype object, then the prototype's prototype, and so on until it either finds the property or reaches the end of the chain (null).
+
+Here's an example to illustrate:
+
+```javascript
+function Person(name) {
+  this.name = name;
+}
+
+Person.prototype.greet = function() {
+  console.log("Hi, my name is " + this.name);
+}
+
+const person1 = new Person("Alice");
+person1.greet(); // Output: "Hi, my name is Alice"
+```
+
+In this example, the `greet` method is defined on the `Person.prototype`. When we call `person1.greet()`, JavaScript first looks for `greet` on `person1`. Since it's not there, it follows the prototype chain to `Person.prototype` and finds the method.
+
+This prototype-based approach allows JavaScript to achieve inheritance without explicit class definitions. It promotes code reusability and reduces memory usage by sharing properties and methods among objects.
+
+For a deeper understanding, you can refer to these resources:
+
+* [JavaScript Object Prototypes](https://www.w3schools.com/js/js_object_prototypes.asp)
+* [Object prototypes - Learn web development | MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
