@@ -2204,3 +2204,16 @@ personDetails.apply(person2, ["Siddheswari", "a", "Home maker"]); // parameter w
 let myData = personDetails.bind(person3, "Bandel", "a", "Student"); // bind method used for store a function
 myData();
 ```
+
+**Synchronous and Asynchronous Programming**
+
+*What is Synchronous and Asynchronous Programming*
+
+* Synchromous Programming means it will use a single-thread, so only one operation of program will run at a time.
+
+  > Sync is blocking - it will only send the server one request at a time and will wait fro that request to be answered by the server.
+
+* Asynchromous is non-blocking, which means it will send multiple requests to a server at a time.
+
+  > Async increases throughput because multiple operations can run at the same time.
+
