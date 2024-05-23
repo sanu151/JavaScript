@@ -2217,3 +2217,4 @@ myData();
 
   > Async increases throughput because multiple operations can run at the same time.
 
+![image](https://github.com/sanu151/JavaScript/assets/68671274/15ba15bf-810a-44f5-b270-8cd1b42a44f6)
