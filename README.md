@@ -2126,3 +2126,81 @@ Here are some resources for further exploration:
 
 ![image](https://github.com/sanu151/JavaScript/assets/68671274/594e2174-8048-406d-b264-650836b722b5)
 
+**Call Apply and Bind**
+
+All three, `call`, `apply`, and `bind`, are functions in JavaScript used to control the context of a function, specifically the value of the `this` keyword within the function. Here's a breakdown of each:
+
+**Call**
+
+* **Execution:** Executes the function immediately.
+* **Arguments:** Takes two or more arguments. 
+    * The first argument sets the value of `this` inside the function.
+    * Subsequent arguments are passed as normal function arguments.
+
+**Apply**
+
+* **Execution:** Executes the function immediately.
+* **Arguments:** Takes two arguments.
+    * The first argument sets the value of `this` inside the function.
+    * The second argument is an array containing all the other arguments to be passed to the function.
+
+**Bind**
+
+* **Execution:** Doesn't execute the function immediately. Instead, it creates a new function with the specified `this` value bound to it.
+* **Arguments:** Takes two or more arguments.
+    * The first argument sets the value of `this` inside the new function.
+    * Subsequent arguments are optional and are pre-filled into the new function when it's called later.
+
+**Key Differences**
+
+* Call and apply execute the function immediately, while bind creates a new function for later execution.
+* Call takes individual arguments after the `this` argument, while apply takes an array of arguments.
+
+**Use Cases**
+
+These functions are useful when you want a function to run with a specific context (`this` value) in mind. Common scenarios include:
+
+* **Event Handlers:** In event-driven programming, you might want a function to access an object's properties when triggered by an event. You can use `call` or `apply` to bind the function to that object.
+* **Callback Functions:**  When passing functions as arguments (callbacks), you might want to ensure they have a specific context when executed. You can use `bind` to create a new function with the desired context pre-set.
+
+Here's an analogy: Imagine a function as a chef. Call and apply are like giving the chef specific ingredients (arguments) and telling them to cook immediately. Bind is like assigning the chef to a kitchen (setting the context) and letting them know what ingredients (some arguments) to use when you eventually tell them to cook.
+
+Example:
+
+```JavaScript
+// Call Apply and Bind Method
+
+let personDetails = function (city, a, occupation) {
+  console.log(
+    `Hi, I am ${this.firstName} ${this.lastName}. I am ${this.age} years old. I am from ${city}. I am ${a} ${occupation}`
+  );
+};
+
+let perosn1 = {
+  firstName: "Supriyo",
+  lastName: "Das",
+  age: 36,
+};
+
+let person2 = {
+  firstName: "Rupa",
+  lastName: "Das",
+  age: 27,
+};
+
+let person3 = {
+  firstName: "Rishika",
+  lastName: "Das",
+  age: 6,
+};
+
+// call Method
+personDetails.call(perosn1, "Bandel", "an", "Engineer");
+
+// apply Method
+personDetails.apply(person2, ["Siddheswari", "a", "Home maker"]); // parameter will be pass as an arry in apply method
+
+// bind Method
+let myData = personDetails.bind(person3, "Bandel", "a", "Student"); // bind method used for store a function
+myData();
+```
