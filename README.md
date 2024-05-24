@@ -2218,3 +2218,22 @@ myData();
   > Async increases throughput because multiple operations can run at the same time.
 
 ![image](https://github.com/sanu151/JavaScript/assets/68671274/5b06eb41-f754-4964-9e51-37764e8460e9)
+
+Sync function Example:
+```JavaScript
+const fs = require("fs");
+
+console.log(`first line`);
+
+let data = fs.readFileSync("demo.txt", "utf-8");
+console.log(data);
+
+console.log(`last line`);
+```
+Output:
+```
+first line
+A quick brown fox jumpes over the lazy dog
+last line
+```
+
