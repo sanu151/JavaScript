@@ -2261,3 +2261,49 @@ last line
 A quick brown fox jumpes over the lazy dog
 ```
 
+**setTimeout**
+
+The `setTimeout` function in JavaScript is used to delay the execution of a block of code by a specified amount of time. It's one of the main tools for creating asynchronous behavior in your web pages.
+
+Here's how it works:
+
+* **Syntax:**
+
+```javascript
+setTimeout(function, milliseconds);
+```
+
+* **Parameters:**
+  * `function`: This is the function that you want to execute after the delay. It can be an anonymous function defined directly within the `setTimeout` call or a named function defined elsewhere in your code.
+  * `milliseconds`: This is the delay in milliseconds. 1 second is equal to 1000 milliseconds.
+
+* **Behavior:**
+  * `setTimeout` schedules the provided function to be executed after the specified delay.
+  * The JavaScript engine continues to execute other code after calling `setTimeout`. The execution of the delayed function doesn't block the main thread. This makes `setTimeout` asynchronous.
+  * You can optionally store the return value of `setTimeout` in a variable for later use with `clearTimeout` (explained below).
+
+Here's a simple example:
+
+```javascript
+function sayHi() {
+  console.log("Hi!");
+}
+
+setTimeout(sayHi, 2000); // Call sayHi after 2 seconds (2000 milliseconds)
+
+console.log("This will be logged first");
+```
+
+In this example, the code "This will be logged first" will be printed immediately, because `setTimeout` doesn't block the main thread. Then, after 2 seconds, the `sayHi` function will be executed, printing "Hi!" to the console.
+
+**Key Points:**
+
+* `setTimeout` is asynchronous.
+* You can use multiple `setTimeout` calls to schedule multiple functions at different delays.
+* For repeating functionality, consider using `setInterval` instead, which calls a function at regular intervals.
+* There's a companion function `clearTimeout` that allows you to cancel a scheduled timeout before it's executed.
+
+For more advanced usage and detailed explanations, you can refer to these resources:
+
+* [MDN Web Docs - setTimeout()](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout)
+* [W3Schools - setTimeout()](https://www.w3schools.com/jsref/met_win_settimeout.asp)
