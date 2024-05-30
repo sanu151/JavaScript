@@ -2457,3 +2457,90 @@ In this example:
 
 Async/await provides a more elegant and concise way to write asynchronous code in JavaScript. It builds upon promises and offers a more intuitive approach to handling asynchronous operations, making your code cleaner and easier to reason about.
 
+**Promises**
+
+**What are Promises?**
+
+In JavaScript, Promises are objects that represent the eventual completion (or failure) of an asynchronous operation. They provide a cleaner and more manageable way to handle asynchronous code compared to traditional callback methods.
+
+**Key Concepts:**
+
+- **Asynchronous Operations:** These are actions that take some time to complete, often because they involve waiting for external resources (like fetching data from a server).
+- **Pending State:** A promise starts in a pending state, indicating that the operation is ongoing.
+- **Fulfilled State:** When the operation finishes successfully, the promise transitions to a fulfilled state, holding the resulting value.
+- **Rejected State:** If the operation encounters an error, the promise moves to a rejected state, containing the error reason.
+
+**Creating Promises:**
+
+You create a Promise using the `new Promise()` constructor. It takes an executor function as an argument:
+
+```javascript
+let promise = new Promise(function(resolve, reject) {
+  // Asynchronous operation (e.g., fetch data, perform calculations)
+  if (operationSuccessful) {
+    resolve(resultValue); // Promise fulfilled with the result
+  } else {
+    reject(errorReason);  // Promise rejected with the error
+  }
+});
+```
+
+- **Executor Function:** This function contains the asynchronous operation's logic.
+- **`resolve` Function:** Used to indicate successful completion, passing the resulting value.
+- **`reject` Function:** Used to signal an error, passing the error reason.
+
+**Consuming Promises:**
+
+Once you have a promise, you can use the `then()` and `catch()` methods to handle its eventual outcome:
+
+```javascript
+promise.then(function(result) {
+  // Code to execute if the promise is fulfilled, using the result
+}, function(error) {
+  // Code to handle errors if the promise is rejected
+});
+```
+
+- **`then()` Method:** Takes two callback functions as arguments:
+    - The first function is called with the resolved value if the promise is fulfilled.
+    - The second function (optional) is called with the error reason if the promise is rejected.
+- **`catch()` Method:** A shorthand for providing an error handler for a promise rejection. It's equivalent to calling `then(null, errorHandler)`.
+
+**Benefits of Promises:**
+
+- **Improved Code Readability:** Promises make asynchronous code easier to understand and follow by separating asynchronous logic from its usage.
+- **Error Handling:** They provide a structured way to handle errors through the `catch()` method.
+- **Chaining Promises:** You can chain multiple asynchronous operations using `.then()` to create sequences that depend on the results of previous ones.
+
+**Example:**
+
+```javascript
+function fetchData(url) {
+  return new Promise(function(resolve, reject) {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', url);
+    xhr.onload = function() {
+      if (xhr.status === 200) {
+        resolve(JSON.parse(xhr.responseText));
+      } else {
+        reject(new Error('Failed to fetch data'));
+      }
+    };
+    xhr.onerror = function() {
+      reject(new Error('Network error'));
+    };
+    xhr.send();
+  });
+}
+
+fetchData('https://api.example.com/data')
+  .then(function(data) {
+    console.log('Data fetched successfully:', data);
+  })
+  .catch(function(error) {
+    console.error('Error fetching data:', error);
+  });
+```
+
+In this example, `fetchData()` returns a promise that resolves with the fetched data or rejects with an error. The `.then()` and `.catch()` methods are used to handle the promise's outcome.
+
