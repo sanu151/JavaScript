@@ -18,10 +18,14 @@ const processOrder = (order) => {
 };
 
 async function myorder() {
-  let orderPlaced = await placeOrder("Coffee");
-  console.log(orderPlaced);
-  let orderProcessed = await processOrder(orderPlaced);
-  console.log(orderProcessed);
+  try {
+    let orderPlaced = await placeOrder("Coffee");
+    console.log(orderPlaced);
+    let orderProcessed = await processOrder(orderPlaced);
+    console.log(orderProcessed);
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 myorder();
