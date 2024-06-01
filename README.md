@@ -2613,3 +2613,35 @@ In the async/await version, the code reads more naturally, like we are waiting f
 
 I hope this explanation clarifies async/await in JavaScript!
 
+**The micro Task Queue**
+
+In JavaScript, the microtask queue is a critical component for managing the order of execution in asynchronous operations. It holds tasks with higher priority than the regular callback queue, ensuring they run before the event loop moves on to other tasks.
+
+Here's a deeper look at the microtask queue:
+
+**What are Microtasks?**
+
+Microtasks are small, short-duration functions scheduled to run after the current script finishes but before control returns to the event loop. They are typically used for internal housekeeping or to ensure code related to a specific event completes before the event loop moves on.
+
+**Sources of Microtasks:**
+
+- **Promise callbacks:** The `.then`, `.catch`, and `.finally` methods of Promises add their callback functions to the microtask queue.
+- **MutationObserver callbacks:**  Functions passed to the `MutationObserver` API to watch for DOM changes are also added to the microtask queue.
+- **`queueMicrotask()` function:** This function, introduced in modern JavaScript, allows developers to explicitly add tasks to the microtask queue.
+
+**How the Microtask Queue Works:**
+
+The JavaScript engine follows these steps when dealing with the microtask queue and the event loop:
+
+1. **Process the Call Stack:** The call stack executes code synchronously, one function at a time.
+2. **Check for Microtasks:** When a function on the call stack finishes, the engine checks if there are any tasks in the microtask queue.
+3. **Run Microtasks:** If there are microtasks, they are all executed one after another until the queue is empty. This can happen multiple times within a single event loop iteration.
+4. **Move to the Callback Queue:** If the microtask queue is empty and there's no more code on the call stack, the event loop moves on to process tasks from the callback queue (which includes functions from timers, user interactions, etc.).
+
+**Key Points about Microtasks:**
+
+- **Higher Priority:** Microtasks have higher priority than tasks in the callback queue.
+- **Nested Microtasks:** A microtask can itself add new microtasks to the queue using `queueMicrotask()`. These nested microtasks will all run before the event loop moves on.
+- **Understanding Async/Await:** `await` within an `async` function pauses execution until the awaited Promise settles, but it checks for microtasks before continuing. This allows microtasks related to the Promise to run before the `async` function resumes.
+
+By understanding the microtask queue, you can write more predictable and well-structured asynchronous code in JavaScript. It ensures related tasks are executed in the expected order and helps avoid race conditions or unexpected behavior.
