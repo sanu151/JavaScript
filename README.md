@@ -2544,3 +2544,72 @@ fetchData('https://api.example.com/data')
 
 In this example, `fetchData()` returns a promise that resolves with the fetched data or rejects with an error. The `.then()` and `.catch()` methods are used to handle the promise's outcome.
 
+**async await**
+
+Async and await are keywords in JavaScript that work together to handle asynchronous operations in a cleaner and more synchronous-looking way. They are especially useful when dealing with Promises, which are the traditional way to handle asynchronous code in JavaScript.
+
+Here's a breakdown of how they work:
+
+**Async Functions:**
+
+- Declared using the `async` keyword before the function definition.
+- They always return a Promise, even if you don't explicitly use a `return` statement within the function.
+- They allow the use of the `await` keyword within their body.
+
+**Await Keyword:**
+
+- Used only within `async` functions.
+- Placed before a Promise-based operation.
+- Pauses the execution of the async function until the Promise settles (resolves or rejects).
+- Once the Promise settles, the `await` expression is replaced with the resolved value (if successful) or throws the rejection error.
+
+**Benefits of Async/Await:**
+
+- Makes asynchronous code easier to read and write by resembling synchronous code.
+- Avoids the need for complex Promise chaining with `.then` and `.catch`.
+
+**Here's an example to illustrate the difference:**
+
+**Using Promises:**
+
+```javascript
+function fetchData() {
+  return new Promise((resolve, reject) => {
+    // Simulate some asynchronous operation
+    setTimeout(() => {
+      resolve("Data fetched successfully!");
+    }, 1000);
+  });
+}
+
+fetchData()
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.error(error);
+  });
+```
+
+**Using Async/Await:**
+
+```javascript
+async function fetchData() {
+  // Simulate some asynchronous operation
+  const data = await new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Data fetched successfully!");
+    }, 1000);
+  });
+  console.log(data);
+}
+
+fetchData();
+```
+
+In the async/await version, the code reads more naturally, like we are waiting for the data to be fetched before continuing.
+
+**Remember:** `await` can only be used inside `async` functions. If you try to use it outside, you'll get a syntax error.
+
+I hope this explanation clarifies async/await in JavaScript!
+
