@@ -2645,3 +2645,43 @@ The JavaScript engine follows these steps when dealing with the microtask queue 
 - **Understanding Async/Await:** `await` within an `async` function pauses execution until the awaited Promise settles, but it checks for microtasks before continuing. This allows microtasks related to the Promise to run before the `async` function resumes.
 
 By understanding the microtask queue, you can write more predictable and well-structured asynchronous code in JavaScript. It ensures related tasks are executed in the expected order and helps avoid race conditions or unexpected behavior.
+
+**Comparison Operator**
+
+In JavaScript, comparison operators are used to compare values and determine whether a condition is true or false. These operators are essential for making decisions and controlling the flow of your program. Here's a breakdown of common comparison operators in JavaScript:
+
+**Equality Operators**
+
+* **Equal (`==`):** This operator checks if two values are equal, but it can be loose with data types. For example, `1 == "1"` will be true even though one is a number and the other is a string.
+* **Strict Equal (`===`):** This operator performs a stricter comparison, ensuring both the value and data type are the same. So, `1 === "1"` will be false.
+
+**Inequality Operators**
+
+* **Greater Than (`>`):** Checks if the value on the left is greater than the value on the right.
+* **Greater Than or Equal To (`>=`):** Checks if the value on the left is greater than or equal to the value on the right.
+* **Less Than (`<`):** Checks if the value on the left is less than the value on right.
+* **Less Than or Equal To (`<=`):** Checks if the value on the left is less than or equal to the value on the right.
+
+**Other Comparison Operators**
+
+* **Not Equal (`!=`):** The opposite of the equal operator. It returns true if the values are not equal.
+* **Strict Not Equal (`!==`):** The opposite of the strict equal operator. It returns true if the values are not equal or have different data types.
+
+**Using Comparison Operators in Conditional Statements**
+
+Comparison operators are often used in conditional statements like `if`, `else if`, and `switch` to control the program flow based on the comparison results. Here's an example:
+
+```javascript
+let age = 25;
+
+if (age >= 18) {
+  console.log("You are eligible to vote.");
+} else {
+  console.log("You are not eligible to vote.");
+}
+```
+
+In this example, the `if` statement checks if the `age` is greater than or equal to 18. If the condition is true, the program prints "You are eligible to vote." Otherwise, it prints "You are not eligible to vote."
+
+By effectively using comparison operators, you can write programs that make decisions and react to different conditions.
+
