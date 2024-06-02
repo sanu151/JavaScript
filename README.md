@@ -2685,3 +2685,53 @@ In this example, the `if` statement checks if the `age` is greater than or equal
 
 By effectively using comparison operators, you can write programs that make decisions and react to different conditions.
 
+**Truthy and Falsy values**
+
+In JavaScript, you'll encounter the concept of truthy and falsy values. These terms refer to how non-boolean values are evaluated in a Boolean context, like conditions in if statements or logical operations.
+
+Here's a breakdown of truthy and falsy values:
+
+**Truthy Values**
+
+These values are considered true when coerced into a boolean. They include:
+
+* **Non-zero numbers:** Any number except zero (e.g., 1, -5, 10.2).
+* **Non-empty strings:** Any string with characters (e.g., "hello", "world!", "42").
+* **Arrays and Objects:** Even empty arrays (`[]`) and objects (`{}`) are truthy.
+* **Functions:** Any function you define is truthy.
+
+**Falsy Values**
+
+These values are considered false when coerced into a boolean. They include:
+
+* **false:** The boolean value `false` itself.
+* **0:** The number zero (0, -0, and 0n [bigint zero]).
+* **Empty String:** An empty string with no characters (`""`).
+* **null:** Represents the intentional absence of a value.
+* **undefined:** Indicates a variable has not been declared or assigned a value.
+* **NaN (Not a Number):** The result of invalid mathematical operations like `0 / 0`.
+
+**Why are Truthy and Falsy Important?**
+
+Truthy and falsy values are important because they allow for concise conditional statements. For instance:
+
+```javascript
+let userName = "Alice";
+
+if (userName) {
+  console.log("Welcome, " + userName + "!");
+} else {
+  console.log("Please enter your name.");
+}
+```
+
+In this example, the `if` statement checks if `userName` has a value. Since "Alice" is a truthy value, the welcome message is displayed.
+
+**Key Points to Remember**
+
+* All values are truthy except for the explicit falsy ones mentioned above.
+* JavaScript performs type coercion when evaluating truthiness in Boolean contexts.
+* Be cautious when relying on truthy/falsy behavior, as it can lead to unexpected results if not used carefully.
+
+For more complex checks, it's generally recommended to use the strict equality operator (`===`) to avoid unintended consequences from type coercion.
+
