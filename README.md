@@ -2735,3 +2735,75 @@ In this example, the `if` statement checks if `userName` has a value. Since "Ali
 
 For more complex checks, it's generally recommended to use the strict equality operator (`===`) to avoid unintended consequences from type coercion.
 
+**Premitive and Reference data types**
+
+In JavaScript, data comes in two flavors: primitive and reference types. Understanding this distinction is crucial for working effectively with variables and data structures.
+
+**Primitive Data Types**
+
+* **Simple and immutable:** Primitive data types represent basic building blocks of data. Their values are directly stored in the variable itself. Any changes to the variable modify the value itself.
+* **Fixed size in memory:** Since they hold a single piece of data, primitive types have a predefined size in memory allocation. This makes them efficient for storing fundamental values.
+* **Examples:**
+    * Numbers (e.g., 3.14, -20)
+    * Strings (e.g., "hello", "world!")
+    * Booleans (true or false)
+    * Null (represents the intentional absence of a value)
+    * Undefined (indicates a variable has no value assigned)
+    * Symbol (a unique and immutable identifier) (introduced in ES6)
+    * BigInt (arbitrary-precision integers) (introduced in ES2020)
+
+**Reference Data Types**
+
+* **Complex and mutable:** Reference data types hold references to memory locations where the actual data is stored. Assigning a reference type to a variable creates a reference, not a copy of the data. Changes made through the variable will affect the original data.
+* **Dynamic size in memory:** The size of reference types can vary depending on the data they hold. This makes them suitable for storing complex structures.
+* **Examples:**
+    * Objects (collections of key-value pairs)
+    * Arrays (ordered collections of items)
+    * Functions (reusable blocks of code)
+
+**Key Differences and When to Use Each**
+
+The choice between primitive and reference data types depends on your data needs:
+
+* Use primitive data types for simple values like numbers, strings, or boolean flags where you don't need to modify the data itself.
+* Use reference data types for complex structures like collections of information (objects and arrays) or reusable functionalities (functions).
+
+Example using JavaScript code
+```JavaScript
+// Premitive dataType
+let firstPerson = "Supriyo";
+
+let secondPerson = firstPerson;
+
+firstPerson = "Rupa";
+
+console.log(firstPerson);
+console.log(secondPerson);
+
+// Reference dataType
+let person1 = {
+  name: "Supriyo",
+  age: 23,
+};
+
+let person2 = person1;
+
+person2.name = "Rupa";
+
+console.log(person1);
+console.log(person2);
+```
+Output
+```
+Rupa
+Supriyo
+{ name: 'Rupa', age: 23 }
+{ name: 'Rupa', age: 23 }
+```
+
+Here's an analogy to illustrate the difference:
+
+* Imagine primitive data types like sticky notes where you write a single piece of information. The information on the note itself cannot be changed.
+* Reference data types are like folders. Assigning a folder to a variable gives you a reference to its location. You can add, remove, or modify items within the folder, but the folder itself (the reference) remains the same.
+
+By understanding primitive and reference data types, you can write more efficient and predictable JavaScript code.
