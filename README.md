@@ -2895,3 +2895,57 @@ Output
   address: { city: 'Siddheswary', state: 'WB' }
 }
 ```
+
+**Closures in JavaScript**
+
+In JavaScript, closures are a powerful concept that leverages function scoping to create functions that can "remember" and access variables from their outer (enclosing) function's scope, even after the outer function has finished executing.
+
+Here's a breakdown of closures:
+
+**Key Idea:**
+
+* A closure is the combination of a function bundled together (enclosed) with the references to its surrounding state, which is the lexical environment where the function was created.
+* This lexical environment includes local variables that were in scope at the time the closure was created.
+
+**How it Works:**
+
+1. **Function Definition:** When you define a function inside another function, the inner function has access to the outer function's variables and parameters, even after the outer function finishes execution.
+2. **Closure Creation:** When the outer function is called, a closure is created. This closure includes the inner function and a reference to the outer function's lexical environment.
+3. **Inner Function Access:** Even after the outer function finishes running, the inner function can still access the variables in the outer function's scope because of the closure.
+
+**Benefits of Closures:**
+
+* **Data Privacy:** Closures can be used to create private variables within a function. The outer function's variables are not directly accessible from outside, but the inner function can access and modify them.
+* **State Management:** Closures can be used to simulate private state within functions, allowing them to remember values between calls.
+* **Function Customization:** By capturing variables from the outer scope, closures can create functions tailored to specific contexts.
+
+**Example:**
+
+```javascript
+function createGreeter(greeting) {
+  // Outer function scope
+  let name = "World";
+
+  function greet() {
+    // Inner function with access to outer scope's 'greeting' and 'name'
+    return `${greeting}, ${name}!`;
+  }
+
+  return greet; // Returning the inner function (closure)
+}
+
+const myGreeter = createGreeter("Hello");
+
+console.log(myGreeter()); // Output: "Hello, World!"
+```
+
+In this example, the `greet` function (closure) is returned from the `createGreeter` function. Even though `createGreeter` has finished, `greet` can still access the `greeting` and `name` variables from its outer scope.
+
+**Real-World Uses of Closures:**
+
+* **Event Listeners:** Closures are commonly used in event listeners to preserve the state of variables between event triggers.
+* **Modules:** Closures can help create private variables within modules, promoting data encapsulation.
+* **Functions with State:** Closures can be used to create functions that maintain state between calls, useful for things like stateful UI components.
+
+By understanding closures, you can write more modular, flexible, and powerful JavaScript code.
+
