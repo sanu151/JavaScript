@@ -2841,3 +2841,57 @@ In this example, even though `copiedObj` is a new object, the `address` property
 * The spread operator is convenient for creating quick copies of object structures.
 * It's important to be aware of shallow copy behavior when dealing with nested objects or arrays.
 * If you need completely independent copies, explore deep copy techniques like recursion or libraries like `lodash`.
+
+**Deep Copy**
+
+In JavaScript, a deep copy of an object creates a new object that's entirely independent of the original. This means not only are the top-level properties copied, but also any nested objects or arrays within them. Modifications to the copy won't affect the original and vice versa, as they point to separate memory locations.
+
+Here's a breakdown of deep copy:
+
+* **Primitive values:** Similar to shallow copy, primitive values (strings, numbers, booleans) are directly copied into the new object.
+* **Nested objects/arrays:** Unlike shallow copy, deep copy creates entirely new objects or arrays for any nested structures within the original object. This ensures independence from the original data.
+
+**Why Deep Copy?**
+
+* **Preserves data integrity:** When you modify the copy, you don't unintentionally change the original object. This is crucial for scenarios where you need to work on a separate version of the data.
+* **Isolation:** Deep copies allow you to pass or store objects without worrying about unintended side effects on the original data.
+
+**JSON.parse(JSON.stringify())**
+
+   This approach involves converting the object to a JSON string using `JSON.stringify` and then parsing it back into an object using `JSON.parse`. While convenient, it has limitations:
+
+   * Doesn't handle circular references (objects referencing themselves)
+   * May lose complex object structures or functions during conversion
+
+```JavaScript
+let firstPerson = {
+  name: "Supriyo Das",
+  age: 35,
+
+  address: {
+    city: "Bandel",
+    state: "WB",
+  },
+};
+
+let secondPerson = JSON.parse(JSON.stringify(firstPerson));
+
+secondPerson.name = "Rupa Das";
+secondPerson.address.city = "Siddheswary";
+
+console.log(firstPerson);
+console.log(secondPerson);
+```
+Output
+```
+{
+  name: 'Supriyo Das',
+  age: 35,
+  address: { city: 'Bandel', state: 'WB' }
+}
+{
+  name: 'Rupa Das',
+  age: 35,
+  address: { city: 'Siddheswary', state: 'WB' }
+}
+```
