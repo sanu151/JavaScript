@@ -2949,3 +2949,51 @@ In this example, the `greet` function (closure) is returned from the `createGree
 
 By understanding closures, you can write more modular, flexible, and powerful JavaScript code.
 
+**Closures in nested functions**
+
+Closures are indeed tightly connected with nested functions in JavaScript. In fact, closures are often created when you define a function inside another function.
+
+Here's how nested functions and closures work together:
+
+1. **Nested Function Definition:** When you define a function within another function, the inner function has access to the outer function's scope, including its variables and parameters. This is because JavaScript uses lexical scoping, which determines the visibility of variables based on where the function is defined, not where it's called.
+
+2. **Closure Creation:** When the outer function is executed, a closure is created. This closure captures the inner function and a reference to the outer function's lexical environment. This lexical environment includes the variables that were in scope at the time the inner function was created.
+
+3. **Inner Function Access:** Even after the outer function finishes its execution and its local variables are typically gone, the inner function (closure) can still access those variables because of the reference it holds through the closure.
+
+**Example:**
+
+```javascript
+function createGreeter(greeting) {
+  // Outer function scope
+  let name = "World";
+
+  function greet() {
+    // Inner function with access to outer scope's 'greeting' and 'name'
+    return `${greeting}, ${name}!`;
+  }
+
+  return greet; // Returning the inner function (closure)
+}
+
+const myGreeter = createGreeter("Hello");
+
+console.log(myGreeter()); // Output: "Hello, World!"
+```
+
+In this example:
+
+* The `createGreeter` function is the outer function.
+* It defines a variable `name` and an inner function `greet`.
+* The `greet` function is the closure. It's returned from `createGreeter`.
+* Even though `createGreeter` finishes running and `name` goes out of scope, the closure (`greet`) remembers the value of `name` because of the closure.
+* When you call `myGreeter()`, it executes the `greet` function (closure), which accesses the `name` variable and returns the greeting.
+
+**Key Points:**
+
+* Nested functions are a way to create closures.
+* The closure holds a reference to the outer function's lexical environment, allowing the inner function to access variables even after the outer function finishes.
+* This ability to remember and access variables from the outer scope makes closures powerful for various purposes like data privacy, state management, and function customization.
+
+By understanding how nested functions and closures work together, you can leverage this concept to write more effective and versatile JavaScript code.
+
