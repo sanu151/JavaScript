@@ -2807,3 +2807,37 @@ Here's an analogy to illustrate the difference:
 * Reference data types are like folders. Assigning a folder to a variable gives you a reference to its location. You can add, remove, or modify items within the folder, but the folder itself (the reference) remains the same.
 
 By understanding primitive and reference data types, you can write more efficient and predictable JavaScript code.
+
+**Shallow Copy**
+
+The spread operator (`...`) in JavaScript creates a shallow copy of objects and arrays.
+
+Here's how it works for shallow copy:
+
+* **Arrays:** When you use the spread operator on an array, it creates a new array with copies of the original elements. However, if those elements are themselves objects or arrays, they are still references to the same objects in memory. Modifying a nested object or array element in the copy will affect the original as well.
+* **Objects:** Similar to arrays, spreading an object creates a new object with copies of the top-level properties. But, any nested objects or arrays within those properties remain as references. Changes to these nested structures in the copy will also be reflected in the original.
+
+**Example:**
+
+```javascript
+const originalObj = {
+  name: "Alice",
+  address: {
+    street: "123 Main St",
+  },
+};
+
+const copiedObj = { ...originalObj };
+
+copiedObj.address.street = "456 Elm St";
+
+console.log(originalObj.address.street); // Output: "456 Elm St" (modified through the copy)
+```
+
+In this example, even though `copiedObj` is a new object, the `address` property still refers to the same object as the original. Modifying the `street` property within the copy's `address` object changes it in the original as well.
+
+**Key points to remember:**
+
+* The spread operator is convenient for creating quick copies of object structures.
+* It's important to be aware of shallow copy behavior when dealing with nested objects or arrays.
+* If you need completely independent copies, explore deep copy techniques like recursion or libraries like `lodash`.
