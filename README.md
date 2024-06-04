@@ -2997,3 +2997,55 @@ In this example:
 
 By understanding how nested functions and closures work together, you can leverage this concept to write more effective and versatile JavaScript code.
 
+**Function Currying**
+
+**Concept**
+
+Currying is an advanced technique in functional programming that transforms a function with multiple arguments into a sequence of functions that each take a single argument. It essentially breaks down the function into smaller, more manageable pieces.
+
+**How it Works**
+
+Imagine a function `add(x, y)` that takes two numbers and returns their sum. Currying this function would create a series of nested functions:
+
+1. The first nested function takes the first argument (`x`) and returns a new function that remembers the value of `x`.
+2. The second nested function takes the second argument (`y`) and performs the actual addition using the remembered `x` and the provided `y`.
+
+Here's an example implementation:
+
+```javascript
+function curry(func) {
+  return function curried(arg1) {
+    if (arguments.length >= func.length) {
+      return func.apply(this, arguments); // Call the original function with all args
+    }
+    return function (...rest) {
+      return curried(...rest, arg1); // Return a new curried function with remaining args
+    };
+  };
+}
+```
+
+**Benefits of Currying**
+
+- **Partial Application:** Create pre-configured functions by fixing some arguments.
+- **Higher-Order Functions:** Build functions that operate on other functions.
+- **Improved Code Readability:** Break down complex logic into smaller, more focused functions.
+- **Modular and Reusable Code:** Create reusable function building blocks.
+
+**Example Usage**
+
+```javascript
+const add = curry((x, y) => x + y);
+
+const add5 = add(5); // Partially apply add with 5
+
+console.log(add5(3)); // Output: 8 (5 + 3)
+
+const multiply = curry((x, y) => x * y);
+
+const multiplyBy3 = multiply(3);
+
+console.log(multiplyBy3(4)); // Output: 12 (3 * 4)
+```
+
+**In summary,** currying provides a powerful tool for managing functions with multiple arguments in JavaScript, promoting functional programming principles and creating more flexible and reusable code.
