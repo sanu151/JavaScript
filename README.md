@@ -3049,3 +3049,111 @@ console.log(multiplyBy3(4)); // Output: 12 (3 * 4)
 ```
 
 **In summary,** currying provides a powerful tool for managing functions with multiple arguments in JavaScript, promoting functional programming principles and creating more flexible and reusable code.
+
+**Undefined vs null vs not defined**
+
+Here's a breakdown of null vs not defined vs undefined in JavaScript:
+
+**Undefined**
+
+- Indicates a variable has been declared but **not assigned a value**.
+- JavaScript automatically assigns `undefined` to such variables.
+- Think of it as an empty container with no contents yet.
+
+**Example:**
+
+```javascript
+let x;
+console.log(x); // Output: undefined
+```
+
+**Null**
+
+- Represents an **intentional absence of a value**.
+- You explicitly assign `null` to a variable to indicate it doesn't hold any object reference.
+- Think of it as a placeholder that signifies "no value here."
+
+**Example:**
+
+```javascript
+let y = null;
+console.log(y); // Output: null
+```
+
+**Not Defined**
+
+- Refers to a variable that hasn't even been declared using `var`, `let`, or `const`.
+- Trying to access it results in a reference error.
+- It's different from `undefined` because the variable itself doesn't exist.
+
+**Example:**
+
+```javascript
+console.log(z); // Throws a ReferenceError because z is not defined
+```
+
+**Key Differences**
+
+| Feature                 | Undefined                                 | Null                                       | Not Defined                                 |
+|-------------------------|--------------------------------------------|---------------------------------------------|----------------------------------------------|
+| Declaration              | Variable declared but not assigned a value | Explicitly assigned `null`                 | Variable not declared at all                |
+| Value                    | `undefined` (primitive type)              | `null` (primitive type)                     | ReferenceError                              |
+| Represents               | Missing value                              | Intentional absence of an object reference  | Variable itself doesn't exist                |
+
+**Additional Notes**
+
+- While `null` and `undefined` might evaluate to equal using the loose equality operator (`==`), they are not strictly equal (`!==`).
+- `typeof undefined` returns "undefined".
+- `typeof null` surprisingly returns "object" (a historical quirk in JavaScript).
+
+**typeOf operator**
+
+The `typeof` operator in JavaScript is a unary operator that returns a string indicating the data type of its operand (the value it operates on). It's a handy tool for type checking in your code.
+
+**How it Works**
+
+Simply place `typeof` before the operand (variable, expression, etc.) you want to check the type of. Here's the syntax:
+
+```javascript
+typeof operand
+```
+
+`typeof` works with various data types in JavaScript:
+
+- **Primitive Types:**
+  - `number`: For numeric values (e.g., `10`, `3.14`).
+  - `string`: For text data enclosed in quotes (e.g., `"hello"`).
+  - `boolean`: For `true` or `false` values.
+  - `undefined`: For variables declared but not assigned a value.
+  - `symbol`: A unique and immutable data type (rarely used).
+- **Object Types:**
+  - `object`: For complex data structures like arrays, objects, functions, etc. (Note: `null` also incorrectly returns "object" in JavaScript).
+
+**Examples:**
+
+```javascript
+console.log(typeof 42);       // Output: "number"
+console.log(typeof "hello");  // Output: "string"
+console.log(typeof true);    // Output: "boolean"
+console.log(typeof undefined); // Output: "undefined"
+
+let x;
+console.log(typeof x);       // Output: "undefined" (x is declared but not assigned)
+
+const y = null;
+console.log(typeof y);       // Output: "object" (incorrectly due to a JavaScript quirk)
+
+const func = function() {};
+console.log(typeof func);    // Output: "function"
+
+const arr = [1, 2, 3];
+console.log(typeof arr);      // Output: "object"
+```
+
+**Important Considerations**
+
+- `typeof` only reveals the data type at runtime, not during declaration (JavaScript is dynamically typed).
+- Use strict equality (`===`) for type checks instead of loose equality (`==`) to avoid unexpected results.
+
+By effectively using `typeof`, you can gain better control over data types in your JavaScript programs, leading to more robust and predictable code.
+
