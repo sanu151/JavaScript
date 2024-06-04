@@ -3105,3 +3105,55 @@ console.log(z); // Throws a ReferenceError because z is not defined
 - While `null` and `undefined` might evaluate to equal using the loose equality operator (`==`), they are not strictly equal (`!==`).
 - `typeof undefined` returns "undefined".
 - `typeof null` surprisingly returns "object" (a historical quirk in JavaScript).
+
+**typeOf operator**
+
+The `typeof` operator in JavaScript is a unary operator that returns a string indicating the data type of its operand (the value it operates on). It's a handy tool for type checking in your code.
+
+**How it Works**
+
+Simply place `typeof` before the operand (variable, expression, etc.) you want to check the type of. Here's the syntax:
+
+```javascript
+typeof operand
+```
+
+`typeof` works with various data types in JavaScript:
+
+- **Primitive Types:**
+  - `number`: For numeric values (e.g., `10`, `3.14`).
+  - `string`: For text data enclosed in quotes (e.g., `"hello"`).
+  - `boolean`: For `true` or `false` values.
+  - `undefined`: For variables declared but not assigned a value.
+  - `symbol`: A unique and immutable data type (rarely used).
+- **Object Types:**
+  - `object`: For complex data structures like arrays, objects, functions, etc. (Note: `null` also incorrectly returns "object" in JavaScript).
+
+**Examples:**
+
+```javascript
+console.log(typeof 42);       // Output: "number"
+console.log(typeof "hello");  // Output: "string"
+console.log(typeof true);    // Output: "boolean"
+console.log(typeof undefined); // Output: "undefined"
+
+let x;
+console.log(typeof x);       // Output: "undefined" (x is declared but not assigned)
+
+const y = null;
+console.log(typeof y);       // Output: "object" (incorrectly due to a JavaScript quirk)
+
+const func = function() {};
+console.log(typeof func);    // Output: "function"
+
+const arr = [1, 2, 3];
+console.log(typeof arr);      // Output: "object"
+```
+
+**Important Considerations**
+
+- `typeof` only reveals the data type at runtime, not during declaration (JavaScript is dynamically typed).
+- Use strict equality (`===`) for type checks instead of loose equality (`==`) to avoid unexpected results.
+
+By effectively using `typeof`, you can gain better control over data types in your JavaScript programs, leading to more robust and predictable code.
+
