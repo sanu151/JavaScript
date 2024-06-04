@@ -3157,3 +3157,41 @@ console.log(typeof arr);      // Output: "object"
 
 By effectively using `typeof`, you can gain better control over data types in your JavaScript programs, leading to more robust and predictable code.
 
+**isArray**
+
+The `isArray()` method in JavaScript is a built-in function used to determine whether a given value is an array or not. It returns `true` if the value is an array and `false` otherwise.
+
+**Here's a breakdown of how `isArray()` works:**
+
+- **Purpose:** It specifically checks if the value is an array object created using the array literal syntax (`[]`) or the `Array` constructor.
+- **Functionality:** It doesn't rely on the object's prototype chain or the constructor it was created with. This ensures consistent behavior regardless of how the array was created.
+- **Arguments:** It takes a single argument, which is the value to be checked.
+
+**Example Usage:**
+
+```javascript
+const myArray = [1, 2, 3];
+const myObject = { name: 'Alice', age: 30 };
+const myString = 'Hello, world!';
+
+console.log(isArray(myArray));  // Output: true
+console.log(isArray(myObject)); // Output: false
+console.log(isArray(myString)); // Output: false
+```
+
+**Alternatives (Less Common):**
+
+- **`instanceof Array`:** While less common than `isArray()`, you can use the `instanceof` operator to check if an object is an instance of the `Array` constructor. However, this might not work as expected for arrays created in other ways (e.g., by libraries).
+
+```javascript
+console.log(myArray instanceof Array);  // Output: true
+console.log(myObject instanceof Array); // Output: false (might be true for library-created arrays)
+```
+
+**Why Use `isArray()`?**
+
+- **Reliability:** `isArray()` is the most reliable and widely supported way to check if a value is an array in JavaScript.
+- **Performance:** It's generally considered to be a performant method for this task.
+- **Clarity:** It clearly expresses the intent to check for an array type.
+
+**In summary, the `isArray()` method is the recommended approach for determining if a value is an array in JavaScript. It offers clear, reliable, and performant functionality for this common task.**
