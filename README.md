@@ -32,7 +32,7 @@ HTML, CSS, JS cheat sheet : https://htmlcheatsheet.com/
 
 ---
 
-# Notes
+## Notes
 
 **What is JavaScript?**
 
@@ -80,7 +80,7 @@ It was Developed by Ryan Dahi and It uses Chrome's V8 engine.
 
 Node.js is an open source, cross-platform runtime environment for developing server-side and networking applications. Node.js applications are written in JavaScript, and can be run within the Node.js runtime on OS X, Microsoft Windows, and Linux.
 
-**Variables in JavaScript**
+## Variables in JavaScript
 
 > Variables are containers for storing data (storing data values).
 
@@ -198,6 +198,8 @@ Creating variables in JavaScript is fundamental for storing and manipulating dat
     z = 10; // TypeError: Assignment to constant variable.
     ```
 
+## Arrays
+
 **What are Arrays?**
 
 - Similar to a variable an array also stores data but it can store multiple data items.
@@ -300,7 +302,7 @@ JavaScript provides several built-in methods for working with arrays. Here are s
 
 These are just a few of the many methods available for manipulating arrays in JavaScript. Each method serves a specific purpose and can be used to efficiently work with arrays in your code.
 
-**Objects in JavaScript**
+## Objects in JavaScript
 
 - IN JavaScript, an object is an unordered collection of key-value pairs. Each key-value pair is called a property.
 
@@ -367,7 +369,7 @@ var myData = {
 console.log(myData.family.spose); // Rupa Das
 ```
 
-**Conditional Statements(if, else, else-if)**
+## Conditional Statements(if, else, else-if)
 
 * Conditional statements, also known as decision-making statements, are a fundamental concept in programming. They allow you to control the flow of your program based on certain conditions.
 
@@ -406,6 +408,9 @@ Output:
 yaeee! I got the bicycle
 Grade A
 ```
+
+## Loop
+
 **The for loop**
 
 - loops are the statements that we can use to control a flow of the program and to do some repeatative.
@@ -536,9 +541,9 @@ for (var c of str) {
 }
 ```
 
-**Functions in JavaScript**
+## Functions in JavaScript
 
-What are Functions?
+**What are Functions?**
 
 *A function is a block of code that performs a specific task*
 
@@ -548,7 +553,7 @@ What are Functions?
 
 - A function in JavaScript is similar to a procedure-a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output. To use a function, we must define it somewhere in the scope from which we wish to call it.
 
-Declaring and invoking a Function
+**Declaring and invoking a Function**
 
 The syntax to declare and call a function is given below:
 
@@ -602,7 +607,7 @@ var result = add(4, 5);
 console.log(result);
 ```
 
-**Hoisting**
+## Hoisting
 
  Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their containing scope during the compile phase, before the code is executed. This means that regardless of where variables and functions are declared within their scope, they are moved to the top of the scope, giving the impression that they are "hoisted" to the top.
 
@@ -648,7 +653,28 @@ var foo = function() {
 
 In this case, the variable `foo` is hoisted, but its value (the function) is not. Therefore, trying to call `foo()` before the function assignment will result in a TypeError.
 
-**ES6 - EcmaScript 2015**
+## The HTML DOM (Document Object Model)
+When a web page is loaded, the browser creates a Document Object Model of the page.
+
+The HTML DOM model is constructed as a tree of Objects:
+
+![image](https://github.com/user-attachments/assets/c51ce285-e9dc-4dc7-b8c4-6e121df4ce92)
+
+## What is the DOM?
+The DOM is a W3C (World Wide Web Consortium) standard.
+
+The DOM defines a standard for accessing documents:
+
+"The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document."
+
+The W3C DOM standard is separated into 3 different parts:
+
+- Core DOM - standard model for all document types
+- XML DOM - standard model for XML documents
+- HTML DOM - standard model for HTML documents
+
+
+## ES6 - EcmaScript 2015**
 
 **ECMA** - *Eupropean Computer Manufacturer Association*
 
@@ -783,7 +809,7 @@ By understanding `let` and `const`, you can write cleaner, more maintainable Jav
 | Best Practice      | Avoid               | Use by default      | Use for constants   |
 
 
-**Arrow Functions**
+### Arrow Functions
 
 Arrow functions, introduced in ES6 (ECMAScript 2015), provide a concise syntax for writing JavaScript functions. Here's a breakdown of their key characteristics:
 
