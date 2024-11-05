@@ -3,7 +3,7 @@
 # JavaScript
 **JS Documentation :** https://github.com/anisul-Islam/javascript-documentation
 
-JavaScript Cheat Sheet : [https://htmlcheatsheet.com/js/](https://htmlcheatsheet.com/js/)
+### JavaScript Cheat Sheet : [https://htmlcheatsheet.com/js/](https://htmlcheatsheet.com/js/)
 
 JSON Placeholder : https://jsonplaceholder.typicode.com/guide/
 
